@@ -70,7 +70,7 @@ nav {
     https://codepen.io/Mark_Bowley/pen/mEtqj
 */
 
-.bubbleContainer {
+/*.bubbleContainer {
     bottom: 0;
     left: 0;
     position: fixed;
@@ -79,14 +79,14 @@ nav {
     z-index: -1;
 }
 
-/* KEYFRAMES */
+ KEYFRAMES
 @keyframes animateBubble {
     0% {
         margin-top: 1000px;
     }
 
     100% {
-        margin-top: -100%;
+        margin-top: -500px;
         display: none;
     }
 
@@ -110,6 +110,7 @@ nav {
     width: 100px;
     height: 100px;
     border-radius: 50%;
+    z-index: 1;
 
 
     animation: animateBubble 5s linear infinite, 2s ease-in-out infinite alternate;
@@ -128,7 +129,7 @@ nav {
 #bubble5 {
     left: 0;
     top: -100%;
-}
+}*/
 
 
 article {
