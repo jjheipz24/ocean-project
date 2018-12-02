@@ -25,14 +25,32 @@
             //green panel
             let backBox = base.rectangle(
                 150, base.canvas.height, 0x017301, 0x017301, 1, 0, 0);
-            //trash icon
+            //----------TRASH ICON---------------
             let trash = base.sprite("images/trashbag.svg");
             trash.anchor.x = 0.5;
             trash.anchor.y = 0.5;
-            backBox.putTop(trash, 0, 50);
+            backBox.putTop(trash, 0, 60);
             trash.scale.set(0.5, 0.5);
             let trashText = base.text("Trash", "12px Nunito", "white");
             trash.putCenter(trashText, 0, 50);
+
+            //-----------OIL ICON---------------
+            let oil = base.sprite("images/oil.svg");
+            oil.anchor.x = 0.5;
+            oil.anchor.y = 0.5;
+            backBox.putCenter(oil);
+            oil.scale.set(0.5, 0.5);
+            let oilText = base.text("Oil", "12px Nunito", "white");
+            oil.putCenter(oilText, 0, 50);
+
+            //-----------CHEMICAL ICON---------------
+            let chem = base.sprite("images/tank.svg");
+            chem.anchor.x = 0.5;
+            chem.anchor.y = 0.5;
+            backBox.putBottom(chem, 0, -75);
+            chem.scale.set(0.4, 0.4);
+            let chemText = base.text("Chemicals", "12px Nunito", "white");
+            chem.putCenter(chemText, 0, 50);
         }
 
         function play() {
