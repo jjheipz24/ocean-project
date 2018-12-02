@@ -60,9 +60,9 @@
         particlesJS("bodyBubbles", {
             "particles": {
                 "number": {
-                    "value": 24,
+                    "value": 1,
                     "density": {
-                        "enable": true,
+                        "enable": false,
                         "value_area": 800
                     }
                 },
@@ -152,12 +152,13 @@
                         "particles_nb": 4
                     },
                     "remove": {
-                        "particles_nb": 2
+                        "particles_nb": 1
                     }
                 }
             },
+            });
             //"retina_detect": true
-        });
+
 //        var count_particles, stats, update;
 //        stats = new Stats;
 //        stats.setMode(0);
@@ -181,14 +182,21 @@
 
     <script>
         function bubbleTime() {
+            //first attempt at stopping bubbles
             setTimeout(
             function() {
-                pJSDom[0].pJS.particles.move.enable = false;
-            }, 5000)
+                window.pJSDom[0].pJS.fn.vendors.destroypJS();
+//                pJSDom[0].pJS.particles.opacity.value = 0;
+//                pJSDom[0].pJS.particles.number.value = 0;
+//                pJSDom[0].pJS.particles.move.enable = false;
+//                console.log(pJSDom[0].pJS.particles.opacity.value);
+//                console.log(pJSDom[0].pJS.particles.number.value);
+            }, 1000)
+
+//        let bubbleCanvas = document.getElementsByClassName("particles-js-canvas-el");
         }
 
         bubbleTime();
-
 
     </script>
 </body>
