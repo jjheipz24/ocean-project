@@ -7,6 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
 
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.js"></script>
+
     <!-- particles.js lib - https://github.com/VincentGarreau/particles.js -->
     <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
@@ -16,7 +18,8 @@
     <title>Ocean Intearction</title>
 </head>
 
-<body id="bodyBubbles">
+<body>
+    <div id="bodyBubbles">
 
     <div id="mainContainer">
 
@@ -198,10 +201,15 @@
             }
             //window.pJSDom[0].pJS.fn.vendors.destroypJS()
         }
-        bubbling();
+        //bubbling();
         //if(pJS.particles.interactivity.detect_on)
         //setTimeout(function(){window.pJSDom[0].pJS.fn.vendors.destroypJS();}, 3000);
+        $('#bodyBubbles').hide();
+        $('#bodyBubbles').fadeIn(5000);
+        //$('#bodyBubbles').fadeOut(5000);
+        setTimeout(function(){window.pJSDom[0].pJS.particles.move = false; }, 10000);
     </script>
+</div>
 </body>
 
 </html>
