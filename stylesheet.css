@@ -49,11 +49,13 @@ a:hover {
     font-size: 1.5em;
 }
 
-.aInfo, .aInfoLink {
+.aInfo,
+.aInfoLink {
     color: #007bb8;
 }
 
-.aInfo:hover, .aInfoLink:hover {
+.aInfo:hover,
+.aInfoLink:hover {
     color: white;
 }
 
