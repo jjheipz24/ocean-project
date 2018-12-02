@@ -184,17 +184,19 @@
 
     <script>
         function bubbling() {
+            //gets length of array of bubbles (50)
             for(let i = 0; i < window.pJSDom[0].pJS.particles.array.length; i++) {
+                //for debugging purposes
                 console.log(window.pJSDom[0].pJS.particles.array.length);
                 //let bubbleArray = [];
                 //bubbleArray.push(window.pJSDom[0].pJS.particles);
                 let p = window.pJSDom[0].pJS.particles.array[i];
 
-                if(p[i].x <= 0) {
-                    p.opacity = 0;
+                if(window.pJSDom[0].pJS.particles.array[i].x <= 0) {
+                    window.pJSDom[0].pJS.particles.array[i].opacity = 0;
                 }
             }
-            window.pJSDom[0].pJS.fn.vendors.destroypJS()
+            //window.pJSDom[0].pJS.fn.vendors.destroypJS()
         }
         bubbling();
         //if(pJS.particles.interactivity.detect_on)
