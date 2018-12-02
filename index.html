@@ -60,27 +60,29 @@
         particlesJS("bodyBubbles", {
             "particles": {
                 "number": {
-                    "value": 1,
+                    "value": 50,
                     "density": {
                         "enable": false,
                         "value_area": 800
                     }
                 },
                 "color": {
-                    "value": "#03a0c3"
+                    "value": "#ffffff"
+                    //#03a0c3
                 },
                 "shape": {
                     "type": "circle",
                     "stroke": {
-                        "width": 1,
+                        "width": 0,
                         "color": "#ffffff"
+
                     },
                     "polygon": {
                         "nb_sides": 12
                     },
                 },
                 "opacity": {
-                    "value": 0.5,
+                    "value": 0.4,
                     "random": false,
                     "anim": {
                         "enable": false,
@@ -181,23 +183,22 @@
     </script>
 
     <script>
-        function bubbleTime() {
-            //first attempt at stopping bubbles
-            setTimeout(
-            function() {
-                window.pJSDom[0].pJS.fn.vendors.destroypJS();
-//                pJSDom[0].pJS.particles.opacity.value = 0;
-//                pJSDom[0].pJS.particles.number.value = 0;
-//                pJSDom[0].pJS.particles.move.enable = false;
-//                console.log(pJSDom[0].pJS.particles.opacity.value);
-//                console.log(pJSDom[0].pJS.particles.number.value);
-            }, 1000)
+        function bubbling() {
+            for(let i = 0; i < window.pJSDom[0].pJS.particles.array.length; i++) {
+                console.log(window.pJSDom[0].pJS.particles.array.length);
+                //let bubbleArray = [];
+                //bubbleArray.push(window.pJSDom[0].pJS.particles);
+                let p = window.pJSDom[0].pJS.particles.array[i];
 
-//        let bubbleCanvas = document.getElementsByClassName("particles-js-canvas-el");
+                if(p[i].x <= 0) {
+                    p.opacity = 0;
+                }
+            }
+            window.pJSDom[0].pJS.fn.vendors.destroypJS()
         }
-
-        bubbleTime();
-
+        bubbling();
+        //if(pJS.particles.interactivity.detect_on)
+        //setTimeout(function(){window.pJSDom[0].pJS.fn.vendors.destroypJS();}, 3000);
     </script>
 </body>
 
