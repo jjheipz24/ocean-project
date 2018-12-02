@@ -70,78 +70,14 @@ nav {
     align-items: center;
 }
 
-/* Bubble animation modified from Mark Bowley on CodePen
-    https://codepen.io/Mark_Bowley/pen/mEtqj
-*/
-
-/*.bubbleContainer {
-    bottom: 0;
-    left: 0;
-    position: fixed;
-    right: 0;
-    top: 0;
-    z-index: -1;
-}
-
- KEYFRAMES
-@keyframes animateBubble {
-    0% {
-        margin-top: 1000px;
-    }
-
-    100% {
-        margin-top: -500px;
-        display: none;
-    }
-
-}
-
-@keyframes sideWays {
-    0% {
-        margin-left: 0px;
-    }
-
-    100% {
-        margin-left: 50px;
-    }
-}
-
-.bubble {
+#bodyBubbles {
     position: absolute;
-    background-color: #03a0c3;
-    border: 2px solid white;
-    opacity: .7;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    z-index: 1;
-
-
-    animation: animateBubble 5s linear infinite, 2s ease-in-out infinite alternate;
-
-
-    transform: scale(0.6);
-
-    animation-iteration-count: 1;
-}
-
-#bubble0,
-#bubble1,
-#bubble2,
-#bubble3,
-#bubble4,
-#bubble5 {
-    left: 0;
-    top: -100%;
-}*/
-
-#particlesJS {
-    position: absolute;
+    /* Sizing so particles will feel natural on page; no excess border */
     width: 100%;
-    height: 100%;
+    height: 99%;
+    margin: -10px;
+    padding: 0;
 }
-
-
 
 article {
     width: 80%;
