@@ -84,8 +84,15 @@
             ocean.putBottom(kelp, 680, 320);
             kelp.interact = true;
 
+            //-----------FISH ICON---------------
+            let fish = base.sprite("images/fish.svg");
+            fish.anchor.x = 0.5;
+            fish.anchor.y = 0.5;
+            fish.scale.set(0.5, 0.5);
+            ocean.putCenter(fish, 300, 200);
+            fish.interact = true;
 
-            let mainScene = base.group(trash, oil, chem, boat);
+            let mainScene = base.group(trash, oil, chem, boat, kelp, fish);
 
             trash.press = () => {
                 ocean.visible = false;
