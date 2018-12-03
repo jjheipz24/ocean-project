@@ -34,11 +34,16 @@
 
             //New approach to ocean
             //Make the entire background image a background sprite
-            let ocean, trashPollution, oilSpill, chemSpill;
+            let ocean, defaultOcean, trashPollution, oilSpill, chemSpill;
 
             //default ocean scene
             ocean = base.sprite("images/main-template.svg");
             ocean.scale.set(3, 2.7);
+
+            //same as default sprite
+            defaultOcean = base.sprite("images/default.svg");
+            defaultOcean.scale.set(3, 2.7);
+            defaultOcean.visible = false;
 
             //trash pollution ocean scene
             trashPollution = base.sprite("images/trash-pollute.svg");
@@ -73,6 +78,16 @@
             //makes tank interactive
             chem.interact = true;
 
+            //-----------BUTTON ICON---------------
+            let clean = base.sprite("images/button.svg");
+            clean.anchor.x = 0.5;
+            clean.anchor.y = 0.5;
+            clean.scale.set(0.4, 0.4);
+            ocean.putTop(clean, 300, 30);
+            //makes boat interactive
+            clean.interact = true;
+            clean.visible = false;
+
             //-----------BOAT ICON---------------
             let boat = base.sprite("images/boat.svg");
             boat.anchor.x = 0.5;
@@ -100,9 +115,20 @@
 
             //let mainScene = base.group(trash, oil, chem, boat, kelp, fish);
 
+            //----------INTERACTIONS--------------
+
+            clean.press = () => {
+                ocean = defaultOcean;
+                trashPollution.visible = false;
+                clean.visible = false;
+                ocean.visible = true;
+
+            }
+
             trash.press = () => {
                 ocean = trashPollution;
                 ocean.visible = true;
+                clean.visible = true;
             }
 
         }
