@@ -104,10 +104,14 @@ article {
 
 #mobile {
     display: none;
-    color: white;
+    color: black;
     width: 90%;
     margin: 0 auto;
     text-align: center;
+    background-color: white;
+    padding: 5%;
+    margin-top: 5%;
+    border-radius: 25px;
 }
 
 /* Microsoft Edge only; justify content: space-evenly does not work in this window.

@@ -145,10 +145,11 @@
         </script>
 
         <script>
-            //
+
             let checkScreen = false;
 
-            if(window.innerWidth >= 768) {
+            //while (window.innerWidth >= 768) {
+                if(window.innerWidth >= 768) {
                 checkScreen = false;
             } else {
                 checkScreen = true;
@@ -163,8 +164,13 @@
             } else {
                // window.pJSDom[0].pJS.fn.vendors.destroypJS();
                 window.pJSDom[0].pJS.particles.number.value = 25;
+                $('#bodyBubbles').hide();
+                $('#bodyBubbles').fadeIn(5000);
                 console.log("numChange");
             }
+            //console.log(window.innerWidth);
+
+
         </script>
     </div>
 </body>
