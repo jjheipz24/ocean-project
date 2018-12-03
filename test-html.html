@@ -8,13 +8,15 @@
 </head>
 
 <body>
-    <script>
+    <script type="text/javascript">
         let base = hexi(800, 400, setup);
         base.border = "6px #003449 solid";
         base.backgroundColor = "0x007bb8";
         base.scaleToWindow();
 
         base.start();
+
+
 
         function load() {
 
@@ -34,6 +36,8 @@
             let trashText = base.text("Trash", "12px Nunito", "white");
             trash.putCenter(trashText, 0, 50);
 
+            trash.interact = true;
+
             //-----------OIL ICON---------------
             let oil = base.sprite("images/oil.svg");
             oil.anchor.x = 0.5;
@@ -43,6 +47,8 @@
             let oilText = base.text("Oil", "12px Nunito", "white");
             oil.putCenter(oilText, 0, 50);
 
+            oil.interact = true;
+
             //-----------CHEMICAL ICON---------------
             let chem = base.sprite("images/tank.svg");
             chem.anchor.x = 0.5;
@@ -51,6 +57,9 @@
             chem.scale.set(0.4, 0.4);
             let chemText = base.text("Chemicals", "12px Nunito", "white");
             chem.putCenter(chemText, 0, 50);
+
+            chem.interact = true;
+
         }
 
         function play() {
