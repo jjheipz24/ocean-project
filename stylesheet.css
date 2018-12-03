@@ -100,3 +100,15 @@ article {
 #textIndent {
     padding-left: 20px;
 }
+
+/* Microsoft Edge only; justify content: space-evenly does not work in this window.
+Code adapted from James C. on https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/15947692/ */
+@supports (-ms-ime-align:auto) {
+
+    nav, h1 {
+        margin-left: 5%;
+        justify-content: space-around;
+        /* you can also add some other adjustments to size, margins etc to get the same positioning */
+    }
+
+}
