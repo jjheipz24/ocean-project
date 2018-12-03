@@ -77,6 +77,13 @@
             ocean.putTop(boat, 700, 90);
             boat.interact = true;
 
+            //-----------KELP ICON---------------
+            let kelp = base.sprite("images/kelp.svg");
+            kelp.anchor.x = 0.5;
+            kelp.anchor.y = 0.5;
+            ocean.putBottom(kelp, 680, 320);
+            kelp.interact = true;
+
 
             let mainScene = base.group(trash, oil, chem, boat);
 
