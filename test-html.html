@@ -34,7 +34,9 @@
 
             //New approach to ocean
             //Make the entire background image a background sprite
-            let ocean = base.sprite("images/main2.svg");
+            let ocean;
+
+            ocean = base.sprite("images/main2.svg");
             ocean.scale.set(3, 2.7);
 
             //----------TRASH ICON---------------
@@ -43,9 +45,7 @@
             trash.anchor.y = 0.5;
             ocean.putTop(trash, 80, 70);
             trash.scale.set(0.5, 0.5);
-            /*let trashText = base.text("Trash", "12px Nunito", "white");
-            trash.putCenter(trashText, 50, 50); */
-
+            //makes trash interactive
             trash.interact = true;
 
             //-----------OIL ICON---------------
@@ -53,10 +53,8 @@
             oil.anchor.x = 0.5;
             oil.anchor.y = 0.5;
             ocean.putTop(oil, 80, 210);
-            oil.scale.set(0.5, 0.5);
-            /*let oilText = base.text("Oil", "12px Nunito", "white");
-            oil.putCenter(oilText, 0, 50);*/
-
+            oil.scale.set(0.6, 0.6);
+            //makes oil interactive
             oil.interact = true;
 
             //-----------CHEMICAL ICON---------------
@@ -64,10 +62,8 @@
             chem.anchor.x = 0.5;
             chem.anchor.y = 0.5;
             ocean.putTop(chem, 85, 340);
-            chem.scale.set(0.4, 0.4);
-            /*let chemText = base.text("Chemicals", "12px Nunito", "white");
-            chem.putCenter(chemText, 0, 50);*/
-
+            chem.scale.set(0.5, 0.5);
+            //makes tank interactive
             chem.interact = true;
 
             //-----------BOAT ICON---------------
@@ -75,6 +71,7 @@
             boat.anchor.x = 0.5;
             boat.anchor.y = 0.5;
             ocean.putTop(boat, 700, 90);
+            //makes boat interactive
             boat.interact = true;
 
             //-----------KELP ICON---------------
@@ -82,6 +79,7 @@
             kelp.anchor.x = 0.5;
             kelp.anchor.y = 0.5;
             ocean.putBottom(kelp, 680, 320);
+            //makes kelp interactive
             kelp.interact = true;
 
             //-----------FISH ICON---------------
@@ -90,6 +88,7 @@
             fish.anchor.y = 0.5;
             fish.scale.set(0.5, 0.5);
             ocean.putCenter(fish, 300, 200);
+            //makes fish interactive
             fish.interact = true;
 
             let mainScene = base.group(trash, oil, chem, boat, kelp, fish);

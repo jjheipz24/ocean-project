@@ -1,4 +1,4 @@
-<svg id="trashbag" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256.91 350.39">
+<svg id="trashbag" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256.91 449.98">
   <defs>
     <style>
       .cls-1 {
@@ -25,6 +25,20 @@
       .cls-4 {
         stroke-width: 4px;
       }
+
+      .cls-5 {
+        font-size: 72px;
+        fill: #fff;
+        font-family: Nunito-Regular, Nunito;
+      }
+
+      .cls-6 {
+        letter-spacing: -0.08em;
+      }
+
+      .cls-7 {
+        letter-spacing: 0em;
+      }
     </style>
   </defs>
   <title>trashbag</title>
@@ -40,4 +54,5 @@
   <path class="cls-3" d="M529.12,277.43c-.17-.47-11.06,11.14-13.35,17.51Z" transform="translate(-366.84 -238.94)"/>
   <path class="cls-3" d="M489.86,277.22c-.43-.18-1.16,12.63,1.23,17.61Z" transform="translate(-366.84 -238.94)"/>
   <path class="cls-3" d="M466.08,282.49c.29-.34,6.57,7.48,6.72,11.88Z" transform="translate(-366.84 -238.94)"/>
+  <text class="cls-5" transform="translate(45.66 430.18)"><tspan class="cls-6">T</tspan><tspan class="cls-7" x="37.58" y="0">r</tspan><tspan x="62.71" y="0">ash</tspan></text>
 </svg>
