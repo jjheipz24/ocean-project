@@ -117,6 +117,7 @@
 
             //----------INTERACTIONS--------------
 
+            //Clean up the ocean button makes the screen reset to main ocean
             clean.press = () => {
                 ocean = defaultOcean;
                 trashPollution.visible = false;
@@ -124,7 +125,7 @@
                 ocean.visible = true;
 
             }
-
+            //makes scene show trash pollution
             trash.press = () => {
                 ocean = trashPollution;
                 ocean.visible = true;
@@ -136,6 +137,7 @@
         function play() {
 
         }
+
     </script>
 </body>
 
