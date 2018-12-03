@@ -23,6 +23,10 @@
         }
 
         function setup() {
+            //ocean
+            let oceanBase = base.sprite("images/main-template.svg");
+            oceanBase.x = 150;
+            oceanBase.scale.set(3.1, 2.7);
 
             //green panel
             let backBox = base.rectangle(
@@ -59,6 +63,11 @@
             chem.putCenter(chemText, 0, 50);
 
             chem.interact = true;
+            let mainScene = base.group(oceanBase, trash, oil, chem);
+
+            trash.press = () => {
+                oceanBase.visible = false;
+            }
 
         }
 
