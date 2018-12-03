@@ -102,6 +102,14 @@ article {
     padding-left: 20px;
 }
 
+#mobile {
+    display: none;
+    color: white;
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+
 /* Microsoft Edge only; justify content: space-evenly does not work in this window.
 Code adapted from James C. on https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/15947692/ */
 @supports (-ms-ime-align:auto) {
@@ -114,8 +122,10 @@ Code adapted from James C. on https://developer.microsoft.com/en-us/microsoft-ed
 }
 
 @media screen and (max-width: 768px){
-    #bodyBubbles {
-        display: none;
+    h1 {
+        font-size: 6vw;
     }
-    window.pJSDom[0].pJS.fn.vendors.destroypJS();
+    #mobile {
+        display: block;
+    }
 }

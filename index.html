@@ -29,6 +29,11 @@
                 <a class="navLink" href="https://ellamathewson.github.io/ocean-interaction/resources.html">Resources</a>
             </nav>
 
+        <article id="mobile">
+            <p>This interaction works best on screens larger than 768 pixels.
+                <br><br>
+                Feel free to browse the other pages!</p>
+            </article>
         </div>
 
         <script>
@@ -141,9 +146,9 @@
 
         <script>
             //
-            let checkScreen;
+            let checkScreen = false;
 
-            if(window.innerHeight >= 768px) {
+            if(window.innerWidth >= 768) {
                 checkScreen = false;
             } else {
                 checkScreen = true;
@@ -156,7 +161,9 @@
                     window.pJSDom[0].pJS.particles.move.enable = false;
                 }, 5000);
             } else {
-                $('#bodyBubbles').hide();
+               // window.pJSDom[0].pJS.fn.vendors.destroypJS();
+                window.pJSDom[0].pJS.particles.number.value = 25;
+                console.log("numChange");
             }
         </script>
     </div>
