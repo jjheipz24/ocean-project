@@ -6,6 +6,7 @@
 
 body {
     background-color: #007bb8;
+    /*background: linear-gradient(270deg, #007bb8, #004f77);*/
     width: auto;
     height: auto;
 }
@@ -110,5 +111,11 @@ Code adapted from James C. on https://developer.microsoft.com/en-us/microsoft-ed
         justify-content: space-around;
         /* you can also add some other adjustments to size, margins etc to get the same positioning */
     }
+}
 
+@media screen and (max-width: 768px){
+    #bodyBubbles {
+        display: none;
+    }
+    window.pJSDom[0].pJS.fn.vendors.destroypJS();
 }

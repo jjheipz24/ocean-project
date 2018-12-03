@@ -33,8 +33,8 @@
 
         <script>
             /* Code from Particles.js:
-                        https://vincentgarreau.com/particles.js/
-                    */
+                                    https://vincentgarreau.com/particles.js/
+                                */
             particlesJS("bodyBubbles", {
                 "particles": {
                     "number": {
@@ -140,13 +140,24 @@
         </script>
 
         <script>
-            //window.pJSDom[0].pJS.fn.vendors.destroypJS()
+            //
+            let checkScreen;
 
-            $('#bodyBubbles').hide();
-            $('#bodyBubbles').fadeIn(5000);
-            setTimeout(function() {
-                window.pJSDom[0].pJS.particles.move.enable = false;
-            }, 5000);
+            if(window.innerHeight >= 768px) {
+                checkScreen = false;
+            } else {
+                checkScreen = true;
+            }
+
+            if (checkScreen == false) {
+                $('#bodyBubbles').hide();
+                $('#bodyBubbles').fadeIn(5000);
+                setTimeout(function() {
+                    window.pJSDom[0].pJS.particles.move.enable = false;
+                }, 5000);
+            } else {
+                $('#bodyBubbles').hide();
+            }
         </script>
     </div>
 </body>
