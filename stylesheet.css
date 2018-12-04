@@ -11,12 +11,14 @@ body {
     height: auto;
 }
 
+/* Holds content of the screen*/
 #mainContainer {
     width: 80%;
     margin: 0 10%;
     position: absolute;
 }
 
+/* Container for info on about and resources page */
 .mainContainerInfo {
     padding: 2.5% 0 2.5% 0;
     background-color: white;
@@ -83,6 +85,7 @@ nav {
     align-items: center;
 }
 
+/* Container for bubbles appearing in background */
 #bodyBubbles {
     position: absolute !important;
     /* Sizing so particles will feel natural on page; no excess border */

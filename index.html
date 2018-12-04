@@ -29,17 +29,16 @@
                 <a class="navLink" href="https://ellamathewson.github.io/ocean-interaction/resources.html">Resources</a>
             </nav>
 
-        <article id="mobile">
-            <p>This interaction works best on screens larger than 768 pixels.
-                <br><br>
-                Feel free to browse the other pages!</p>
+            <!-- Pop up menu that appears when screen is too small -->
+            <article id="mobile">
+                <p>This interaction works best on screens larger than 768 pixels.
+                    <br><br> Feel free to browse the other pages!</p>
             </article>
         </div>
 
         <script>
-            /* Code from Particles.js:
-                                    https://vincentgarreau.com/particles.js/
-                                */
+            /* Code adapted from Particles.js: https://vincentgarreau.com/particles.js/ */
+            /* This is the code for the particle.js library used */
             particlesJS("bodyBubbles", {
                 "particles": {
                     "number": {
@@ -142,35 +141,40 @@
                     }
                 },
             });
+
         </script>
 
         <script>
-
+            //boolean to check screen size
             let checkScreen = false;
 
-            //while (window.innerWidth >= 768) {
-                if(window.innerWidth >= 768) {
+            //if window width is greater than value,
+            if (window.innerWidth >= 768) {
+                //boolean is false
                 checkScreen = false;
             } else {
+                //otherwise it is true
                 checkScreen = true;
             }
 
+            //if screen is greater than 768
             if (checkScreen == false) {
+                //bubbles will fade in
                 $('#bodyBubbles').hide();
                 $('#bodyBubbles').fadeIn(5000);
                 setTimeout(function() {
+                    //bubbles will stop after 5 seconds
                     window.pJSDom[0].pJS.particles.move.enable = false;
                 }, 5000);
             } else {
-               // window.pJSDom[0].pJS.fn.vendors.destroypJS();
+                //if screen is smaller than value
+                // window.pJSDom[0].pJS.fn.vendors.destroypJS();
+                //have less bubbles on screen
                 window.pJSDom[0].pJS.particles.number.value = 25;
+                //fade in -- never stops
                 $('#bodyBubbles').hide();
                 $('#bodyBubbles').fadeIn(5000);
-                console.log("numChange");
             }
-            //console.log(window.innerWidth);
-
-
         </script>
     </div>
 </body>
