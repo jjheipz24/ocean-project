@@ -136,3 +136,19 @@ Code adapted from James C. on https://developer.microsoft.com/en-us/microsoft-ed
         display: block;
     }
 }
+
+/* Nav bubble code */
+#iconMenu {
+    position: absolute;
+    top: 20%;
+    left: 20%;
+}
+
+#iconMenu .radial_item, #iconMenu .radial_button {
+    background: white;
+    color: black;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+#iconMenu .radial_item
