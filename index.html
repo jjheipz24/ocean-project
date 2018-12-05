@@ -15,9 +15,6 @@
     <!-- stats.js lib -->
     <script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
 
-    <!-- radial.js library -->
-    <script src="src/radial.js"></script>
-
     <title>Ocean Intearction</title>
 </head>
 
@@ -33,35 +30,6 @@
                 <a class="navLink" href="https://ellamathewson.github.io/ocean-interaction/resources.html">Resources</a>
             </nav>
 -->
-
-            <nav id="iconMenu"></nav>
-
-            <script>
-                var items= [
-                    {className: 'nav', html: '#'},
-                    {className: 'nav', html: '#'},
-                    {className: 'nav', html: '#'}
-                ];
-
-                var options = {
-                    button: false;
-                    deg: 360;
-                    direction: 180;
-                    container: {
-                    width: '100px';
-                    height: '100px';
-                }
-                };
-
-                var radial = new Radial(items, options);
-
-                var menu = document.getElementById('#iconMenu');
-                menu.appendChild(radial.render());
-
-                menu.addEventListener('click', function() {
-                    radial.toggle();
-                });
-            </script>
 
             <!-- Pop up menu that appears when screen is too small -->
             <article id="mobile">
