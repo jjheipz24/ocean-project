@@ -28,7 +28,13 @@ body {
 h1 {
     font-size: 3em;
     display: flex;
+    color: white;
     justify-content: space-evenly;
+}
+
+h2 {
+    font-size: 2em;
+    color: white;
 }
 
 p {
@@ -137,18 +143,9 @@ Code adapted from James C. on https://developer.microsoft.com/en-us/microsoft-ed
     }
 }
 
-/* Nav bubble code */
-
-.menuBubble {
-    position: block;
-    height: 30px;
-    width: 30px;
-    background-color: #ffffff;
-    opacity: 0.4;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    align-content: center;
+.options {
+    display: none;
+    margin: 0;
+    padding: 0;
 }
 

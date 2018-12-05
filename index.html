@@ -20,19 +20,30 @@
 
 <body>
 
-<!--    <span id="bubbleIcon" class="menuBubble" onclick="bubblesStart()"></span>-->
-
     <div id="bodyBubbles">
 
         <div id="mainContainer">
 
 
-            <h1><a href="https://ellamathewson.github.io/ocean-interaction/index.html">SEA WHAT YOU DID?</a></h1>
-            <!-- <nav>
-                <a class="navLink" href="https://ellamathewson.github.io/ocean-interaction/about.html">About</a>
-                <a class="navLink" href="https://ellamathewson.github.io/ocean-interaction/resources.html">Resources</a>
-            </nav>
+            <h1>SEA WHAT YOU DID?</h1>
+            <nav>
+                <h2 onlick="dropdown()" class="dropButton">options</h2>
+                <div class="options">
+                    <a class="navLink" href="">Program</a>
+                    <a class="navLink" href="https://ellamathewson.github.io/ocean-interaction/about.html">About</a>
+                    <a class="navLink" href="https://ellamathewson.github.io/ocean-interaction/resources.html">Resources</a>
+<!--
+                    <a class="navLink" href="#">Jin Jin Heipler</a>
+                    <a class="navLink" href="#">Ella Mathewson</a>
 -->
+                </div>
+            </nav>
+
+            <script>
+                $(".dropButton").click(function() {
+                    $(".options").slideToggle();
+                })
+            </script>
 
             <!-- Pop up menu that appears when screen is too small -->
             <article id="mobile">
@@ -45,10 +56,8 @@
 
         <script>
             bubblesStart();
+
             function bubblesStart() {
-
-                //document.getElementById("bubbleIcon").style.display = 'none';
-
 
                 /* Code adapted from Particles.js: https://vincentgarreau.com/particles.js/ */
                 /* This is the code for the particle.js library used */
