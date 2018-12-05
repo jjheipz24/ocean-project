@@ -138,3 +138,13 @@ Code adapted from James C. on https://developer.microsoft.com/en-us/microsoft-ed
 }
 
 /* Nav bubble code */
+
+.menuBubble {
+    height: 30px;
+    width: 30px;
+    background-color: #ffffff;
+    opacity: 0.4;
+    border-radius: 50%;
+    display: inline-block;
+}
+
