@@ -19,6 +19,10 @@
 </head>
 
 <body>
+
+    <span id="bitch" class="menuBubble" onclick="bubblesStart()"></span>
+
+
     <div id="bodyBubbles">
 
         <div id="mainContainer">
@@ -30,8 +34,6 @@
                 <a class="navLink" href="https://ellamathewson.github.io/ocean-interaction/resources.html">Resources</a>
             </nav>
 -->
-            <span class="menuBubble"></span>
-
 
             <!-- Pop up menu that appears when screen is too small -->
             <article id="mobile">
@@ -40,143 +42,155 @@
             </article>
         </div>
 
-        <script>
-            /* Code adapted from Particles.js: https://vincentgarreau.com/particles.js/ */
-            /* This is the code for the particle.js library used */
-            particlesJS("bodyBubbles", {
-                "particles": {
-                    "number": {
-                        "value": 75,
-                        "density": {
-                            "enable": false,
-                            "value_area": 800
-                        }
-                    },
-                    "color": {
-                        "value": "#ffffff"
-                        //#03a0c3
-                    },
-                    "shape": {
-                        "type": "circle",
-                        "stroke": {
-                            "width": 0,
-                            "color": "#ffffff"
 
-                        },
-                        "polygon": {
-                            "nb_sides": 12
-                        },
-                    },
-                    "opacity": {
-                        "value": 0.4,
-                        "random": false,
-                        "anim": {
-                            "enable": false,
-                            "speed": 1,
-                            "opacity_min": 0.1,
-                            "sync": false
-                        }
-                    },
-                    "size": {
-                        "value": 35.51164387345227,
-                        "random": true,
-                        "anim": {
-                            "enable": false,
-                            "speed": 33.56643356643357,
-                            "size_min": 0.1,
-                            "sync": false
-                        }
-                    },
-                    "line_linked": {
-                        "enable": false,
-                    },
-                    "move": {
-                        "enable": true,
-                        "speed": 6,
-                        "direction": "top",
-                        "random": false,
-                        "straight": false,
-                        "out_mode": "out",
-                        "bounce": false,
-                        "attract": {
-                            "enable": false,
-                            "rotateX": 600,
-                            "rotateY": 1200
-                        }
-                    }
-                },
-                "interactivity": {
-                    "detect_on": "canvas",
-                    "events": {
-                        "onhover": {
-                            "enable": false,
-                            "mode": "repulse"
-                        },
-                        "onclick": {
-                            "enable": false,
-                            "mode": "push"
-                        },
-                        "resize": true
-                    },
-                    "modes": {
-                        "grab": {
-                            "distance": 400,
-                            "line_linked": {
-                                "opacity": 1
+
+        <script>
+            function bubblesStart() {
+
+                document.getElementById("bitch").style.display = 'none';
+
+
+                /* Code adapted from Particles.js: https://vincentgarreau.com/particles.js/ */
+                /* This is the code for the particle.js library used */
+
+                /* SETS UP BUBBLES FROM LIBRARY */
+                particlesJS("bodyBubbles", {
+                    "particles": {
+                        "number": {
+                            "value": 75,
+                            "density": {
+                                "enable": false,
+                                "value_area": 800
                             }
                         },
-                        "bubble": {
-                            "distance": 400,
-                            "size": 40,
-                            "duration": 2,
-                            "opacity": 8,
-                            "speed": 3
+                        "color": {
+                            "value": "#ffffff"
+                            //#03a0c3
                         },
-                        "repulse": {
-                            "distance": 200,
-                            "duration": 0.4
+                        "shape": {
+                            "type": "circle",
+                            "stroke": {
+                                "width": 0,
+                                "color": "#ffffff"
+
+                            },
+                            "polygon": {
+                                "nb_sides": 12
+                            },
                         },
-                        "push": {
-                            "particles_nb": 4
+                        "opacity": {
+                            "value": 0.4,
+                            "random": false,
+                            "anim": {
+                                "enable": false,
+                                "speed": 1,
+                                "opacity_min": 0.1,
+                                "sync": false
+                            }
                         },
-                        "remove": {
-                            "particles_nb": 1
+                        "size": {
+                            "value": 35.51164387345227,
+                            "random": true,
+                            "anim": {
+                                "enable": false,
+                                "speed": 33.56643356643357,
+                                "size_min": 0.1,
+                                "sync": false
+                            }
+                        },
+                        "line_linked": {
+                            "enable": false,
+                        },
+                        "move": {
+                            "enable": true,
+                            "speed": 6,
+                            "direction": "top",
+                            "random": false,
+                            "straight": false,
+                            "out_mode": "out",
+                            "bounce": false,
+                            "attract": {
+                                "enable": false,
+                                "rotateX": 600,
+                                "rotateY": 1200
+                            }
                         }
-                    }
-                },
-            });
-        </script>
+                    },
+                    "interactivity": {
+                        "detect_on": "canvas",
+                        "events": {
+                            "onhover": {
+                                "enable": false,
+                                "mode": "repulse"
+                            },
+                            "onclick": {
+                                "enable": false,
+                                "mode": "push"
+                            },
+                            "resize": true
+                        },
+                        "modes": {
+                            "grab": {
+                                "distance": 400,
+                                "line_linked": {
+                                    "opacity": 1
+                                }
+                            },
+                            "bubble": {
+                                "distance": 400,
+                                "size": 40,
+                                "duration": 2,
+                                "opacity": 8,
+                                "speed": 3
+                            },
+                            "repulse": {
+                                "distance": 200,
+                                "duration": 0.4
+                            },
+                            "push": {
+                                "particles_nb": 4
+                            },
+                            "remove": {
+                                "particles_nb": 1
+                            }
+                        }
+                    },
+                });
 
-        <script>
-            //boolean to check screen size
-            let checkScreen = false;
 
-            //if window width is greater than value,
-            if (window.innerWidth >= 768) {
-                //boolean is false
-                checkScreen = false;
-            } else {
-                //otherwise it is true
-                checkScreen = true;
-            }
 
-            //if screen is greater than 768
-            if (checkScreen == false) {
-                //bubbles will fade in
-                $('#bodyBubbles').hide();
-                $('#bodyBubbles').fadeIn(5000);
-                setTimeout(function() {
-                    //bubbles will stop after 5 seconds
-                    window.pJSDom[0].pJS.particles.move.enable = false;
-                }, 5000);
-            } else {
-                //if screen is smaller than value
-                // window.pJSDom[0].pJS.fn.vendors.destroypJS();
-                //have less bubbles on screen
-                window.pJSDom[0].pJS.particles.number.value = 25;
-                //fade in -- never stops
-                $('#bodyBubbles').hide();
-                $('#bodyBubbles').fadeIn(5000);
+                /* CODE FOR BUBBLES APPEARING ON PAGE */
+
+                //boolean to check screen size
+                let checkScreen = false;
+
+                //if window width is greater than value,
+                if (window.innerWidth >= 768) {
+                    //boolean is false
+                    checkScreen = false;
+                } else {
+                    //otherwise it is true
+                    checkScreen = true;
+                }
+
+                //if screen is greater than 768
+                if (checkScreen == false) {
+                    //bubbles will fade in
+                    $('#bodyBubbles').hide();
+                    $('#bodyBubbles').fadeIn(5000);
+                    setTimeout(function() {
+                        //bubbles will stop after 5 seconds
+                        window.pJSDom[0].pJS.particles.move.enable = false;
+                    }, 5000);
+                } else {
+                    //if screen is smaller than value
+                    // window.pJSDom[0].pJS.fn.vendors.destroypJS();
+                    //have less bubbles on screen
+                    window.pJSDom[0].pJS.particles.number.value = 25;
+                    //fade in -- never stops
+                    $('#bodyBubbles').hide();
+                    $('#bodyBubbles').fadeIn(5000);
+                }
             }
         </script>
     </div>
