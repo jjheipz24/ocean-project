@@ -50,6 +50,16 @@
             trashPollution.scale.set(3, 2.7);
             trashPollution.visible = false;
 
+            //oil spill ocean scene
+            oilSpill = base.sprite("images/oil-pollute.svg");
+            oilSpill.scale.set(3, 2.7);
+            oilSpill.visible = false;
+
+            //chemical spill ocean scene
+            chemSpill = base.sprite("images/chem-pollute.svg");
+            chemSpill.scale.set(3, 2.7);
+            chemSpill.visible = false;
+
 
             //----------TRASH ICON---------------
             let trash = base.sprite("images/trashbag.svg");
@@ -92,7 +102,7 @@
             let boat = base.sprite("images/boat.svg");
             boat.anchor.x = 0.5;
             boat.anchor.y = 0.5;
-            ocean.putTop(boat, 700, 90);
+            ocean.putTop(boat, 646, 90);
             //makes boat interactive
             boat.interact = true;
 
@@ -121,6 +131,8 @@
             clean.press = () => {
                 ocean = defaultOcean;
                 trashPollution.visible = false;
+                oilSpill.visible = false;
+                chemSpill.visible = false;
                 clean.visible = false;
                 ocean.visible = true;
 
@@ -132,12 +144,25 @@
                 clean.visible = true;
             }
 
+            //makes scene show oil spill
+            oil.press = () => {
+                ocean = oilSpill;
+                ocean.visible = true;
+                clean.visible = true;
+            }
+
+            //makes scene show chemical spill
+            chem.press = () => {
+                ocean = chemSpill;
+                ocean.visible = true;
+                clean.visible = true;
+            }
+
         }
 
         function play() {
 
         }
-
     </script>
 </body>
 
