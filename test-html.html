@@ -8,7 +8,58 @@
 </head>
 
 <body>
+    <style>
+        /* POPUP TUTORIAL FROM W3SCHOOLS
+        https://www.w3schools.com/howto/howto_css_modals.asp*/
+        /* The PopUp (background) */
+.popUp {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 5; /* Sit on top */
+    padding-top: 200px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.popup-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+</style>
+
+    <div id="myPopUp" class="popUp">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <p id="popup-text">Some text..</p>
+        </div>
+    </div>
     <script type="text/javascript">
+        // LEARNED PIXI.JS AND HEXI.JS https://github.com/kittykatattack/hexi
+
         let base = hexi(800, 400, setup);
         base.border = "6px #003449 solid";
         base.backgroundColor = "0x007bb8";
@@ -125,7 +176,7 @@
 
             //let mainScene = base.group(trash, oil, chem, boat, kelp, fish);
 
-            //----------INTERACTIONS--------------
+            //----------SCENE CHANGES--------------
 
             //Clean up the ocean button makes the screen reset to main ocean
             clean.press = () => {
@@ -158,6 +209,29 @@
                 clean.visible = true;
             }
 
+            //----------POPUP WINDOWS--------------
+            // Used tutorial from W3Schools https://www.w3schools.com/howto/howto_css_modals.asp
+            var popup = document.getElementById('myPopUp');
+            var span = document.getElementsByClassName("close")[0];
+            var popText = document.getElementById('popup-text');
+            fish.press = () => {
+                if (ocean == trashPollution) {
+                    popText.innerHTML = "Trash has polluted the ocean";
+                } else {
+                    popText.innerHTML = "I am a fish";
+                }
+                popup.style.display = "block";
+            }
+            span.onclick = function() {
+                popup.style.display = "none";
+            }
+
+            window.onclick = function(event) {
+                if (event.target == popup) {
+                    popup.style.display = "none";
+                }
+            }
+
         }
 
         function play() {
@@ -165,5 +239,4 @@
         }
     </script>
 </body>
-
 </html>
