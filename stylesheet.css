@@ -37,10 +37,13 @@ h1 {
 h2 {
     font-size: 1.15em;
     color: white;
+    padding: .5em;
+    border-radius: 50px;
 }
 
 h2:hover {
     cursor: pointer;
+    background-color: #03a0c3;
 }
 
 p {
@@ -49,11 +52,11 @@ p {
 
 a {
     color: white;
-    font-size: 1em;
+    font-size: 1.15em;
     text-decoration: none;
     /* Fill nav bar link */
     padding: .25em 1em;
-    border-radius: .5em;
+    border-radius: 50px;
 }
 
 a:hover {
@@ -93,7 +96,7 @@ a:hover {
 nav {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content:space-around;
     align-items: center;
     padding: 0;
     margin: 0;
