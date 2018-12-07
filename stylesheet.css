@@ -96,7 +96,7 @@ a:hover {
 nav {
     display: flex;
     flex-direction: column;
-    justify-content:space-around;
+    justify-content: space-around;
     align-items: center;
     padding: 0;
     margin: 0;
@@ -134,21 +134,88 @@ article {
     border-radius: 25px;
 }
 
+/* POPUP TUTORIAL FROM W3SCHOOLS
+        https://www.w3schools.com/howto/howto_css_modals.asp*/
+/* The PopUp (background) */
+
+/*Popup background */
+.popUp {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 5;
+    /* Sit on top */
+    padding-top: 200px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100vw;
+    /* Full width */
+    height: 100vh;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+/* Popup Box */
+.popup-content {
+    background-color: #007bb8;
+    border-radius: 25px;
+    margin: 0 30%;
+    padding: 20px 40px 40px 40px;
+    border: 5px solid #003449;
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+/*Popup text*/
+#popup-text {
+    font-family: 'Nunito', sans-serif;
+    color: white;
+    font-size: 20px;
+}
+
+
+/* The Close Button */
+.close {
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    margin-left: 100%;
+    margin-top: -10px;
+}
+
+.close:hover,
+.close:focus {
+    color: #aaaaaa;
+    text-decoration: none;
+    cursor: pointer;
+}
+
 /* Microsoft Edge only; justify content: space-evenly does not work in this window.
 Code adapted from James C. on https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/15947692/ */
 @supports (-ms-ime-align:auto) {
 
-    nav, h1 {
+    nav,
+    h1 {
         margin-left: 5%;
         justify-content: space-around;
         /* you can also add some other adjustments to size, margins etc to get the same positioning */
     }
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 768px) {
     h1 {
         font-size: 6vw;
     }
+
     #mobile {
         display: block;
     }
@@ -159,4 +226,3 @@ Code adapted from James C. on https://developer.microsoft.com/en-us/microsoft-ed
     margin: 0;
     padding: 0;
 }
-

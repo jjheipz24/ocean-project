@@ -7,17 +7,20 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
 
+
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.js"></script>
 
     <!-- particles.js lib - https://github.com/VincentGarreau/particles.js -->
     <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-<!-- Hexi.js library for app-->
+    <!-- Hexi.js library for app-->
     <script src="hexi.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+
 
     <title>Ocean Intearction</title>
 </head>
 
-<body>
+<body onload="loadProgram()">
 
     <div id="bodyBubbles">
 
@@ -52,7 +55,15 @@
             </article>
         </div>
 
-
+        <div id="ocean-program">
+            <script src="app.js"></script>
+            <div id="myPopUp" class="popUp">
+                <div class="popup-content">
+                    <span class="close">&times;</span>
+                    <p id="popup-text">Some text..</p>
+                </div>
+            </div>
+        </div>
 
         <script>
             /* Code adapted from Particles.js: https://vincentgarreau.com/particles.js/ */
