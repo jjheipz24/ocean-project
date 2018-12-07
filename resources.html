@@ -7,6 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
 
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.js"></script>
+
+
     <!-- particles.js lib - https://github.com/VincentGarreau/particles.js -->
     <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
@@ -18,14 +21,29 @@
 
         <div class="mainContainerInfo" id="mainContainer">
 
-            <h1><a class="aInfo" href="https://ellamathewson.github.io/ocean-interaction/index.html">OCEAN</a></h1>
+            <h1 class="aInfo">SEA WHAT YOU DID?</h1>
             <nav>
-                <a class="aInfoLink" href="https://ellamathewson.github.io/ocean-interaction/about.html">About</a>
-                <a class="aInfoLink" href="https://ellamathewson.github.io/ocean-interaction/resources.html">Resources</a>
+                <h2 onlick="dropdown()" class="dropButton" id="infoDropButton">menu</h2>
+                <div class="options">
+                    <a class="aInfoLink" href="">program</a>
+                    <a class="aInfoLink" href="https://ellamathewson.github.io/ocean-interaction/about.html">about</a>
+                    <a class="aInfoLink" href="https://ellamathewson.github.io/ocean-interaction/resources.html">resources</a>
+                    <!--
+                    <a class="navLink" href="#">Jin Jin Heipler</a>
+                    <a class="navLink" href="#">Ella Mathewson</a>
+-->
+                </div>
             </nav>
 
+            <script>
+                $(".dropButton").click(function() {
+                    $(".options").slideToggle();
+                })
+
+            </script>
+
             <article>
-                <h2>How can you help?</h2>
+                <h3>How can you help?</h3>
                 <div id="textIndent">
                     <p>
                         There are many things you can do to help make an impact on our oceans.
@@ -40,8 +58,8 @@
 
             <script>
                 /* Code from Particles.js:
-                            https://vincentgarreau.com/particles.js/
-                        */
+                                                            https://vincentgarreau.com/particles.js/
+                                                        */
                 particlesJS("bodyBubbles", {
                     "particles": {
                         "number": {
@@ -144,6 +162,7 @@
                         }
                     },
                 });
+
             </script>
 
         </div>
