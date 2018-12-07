@@ -23,6 +23,7 @@ body {
 
 
 /* Holds content of the screen*/
+
 #mainContainer {
     width: 80%;
     margin: 0 10%;
@@ -30,10 +31,12 @@ body {
 }
 
 /* Container for info on about and resources page */
+
 .mainContainerInfo {
     padding: 2.5% 0 2.5% 0;
     background-color: white;
     height: 90%;
+    z-index: 1000;
 }
 
 h1 {
@@ -53,6 +56,16 @@ h2 {
 }
 
 h2:hover {
+    cursor: pointer;
+    background-color: #03a0c3;
+}
+
+#infoDropButton {
+    color: #007bb8;
+}
+
+#infoDropButton:hover {
+    color: white;
     cursor: pointer;
     background-color: #03a0c3;
 }
@@ -83,9 +96,9 @@ a:hover {
     color: #007bb8;
 }
 
-.aInfo:hover,
 .aInfoLink:hover {
     color: white;
+
 }
 
 .aInfoLink {
@@ -116,6 +129,7 @@ nav {
 }
 
 /* Container for bubbles appearing in background */
+
 #bodyBubbles {
     position: absolute !important;
     /* Sizing so particles will feel natural on page; no excess border */
@@ -153,9 +167,11 @@ article {
 
 /* POPUP TUTORIAL FROM W3SCHOOLS
         https://www.w3schools.com/howto/howto_css_modals.asp*/
+
 /* The PopUp (background) */
 
 /*Popup background */
+
 .popUp {
     display: none;
     /* Hidden by default */
@@ -180,6 +196,7 @@ article {
 }
 
 /* Popup Box */
+
 .popup-content {
     background-color: #007bb8;
     border-radius: 25px;
@@ -193,6 +210,7 @@ article {
 }
 
 /*Popup text*/
+
 #popup-text {
     font-family: 'Nunito', sans-serif;
     color: white;
@@ -201,6 +219,7 @@ article {
 
 
 /* The Close Button */
+
 .close {
     color: white;
     font-size: 28px;
@@ -218,6 +237,7 @@ article {
 
 /* Microsoft Edge only; justify content: space-evenly does not work in this window.
 Code adapted from James C. on https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/15947692/ */
+
 @supports (-ms-ime-align:auto) {
 
     nav,
