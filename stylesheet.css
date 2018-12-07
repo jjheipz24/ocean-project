@@ -111,6 +111,8 @@ nav {
     align-items: center;
     padding: 0;
     margin: 0;
+    position: relative;
+    z-index: 1000;
 }
 
 /* Container for bubbles appearing in background */
