@@ -1,5 +1,5 @@
 // LEARNED PIXI.JS AND HEXI.JS https://github.com/kittykatattack/hexi
-function loadProgram() {
+window.onload = function() {
     let base = hexi(800, 400, setup);
     base.border = "6px #003449 solid";
     base.backgroundColor = "0x007bb8";
