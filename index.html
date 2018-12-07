@@ -22,6 +22,16 @@
 
 <body onload="loadProgram()">
 
+    <div id="ocean-program">
+        <script src="app.js"></script>
+        <div id="myPopUp" class="popUp">
+            <div class="popup-content">
+                <span class="close">&times;</span>
+                <p id="popup-text">Some text..</p>
+            </div>
+        </div>
+    </div>
+
     <div id="bodyBubbles">
 
         <div id="mainContainer">
@@ -45,7 +55,6 @@
                 $(".dropButton").click(function() {
                     $(".options").slideToggle();
                 })
-
             </script>
 
             <!-- Pop up menu that appears when screen is too small -->
@@ -55,6 +64,7 @@
             </article>
         </div>
 
+        <!--
         <div id="ocean-program">
             <script src="app.js"></script>
             <div id="myPopUp" class="popUp">
@@ -64,6 +74,7 @@
                 </div>
             </div>
         </div>
+-->
 
         <script>
             /* Code adapted from Particles.js: https://vincentgarreau.com/particles.js/ */
@@ -207,7 +218,6 @@
                 $('#bodyBubbles').hide();
                 $('#bodyBubbles').fadeIn(5000);
             }
-
         </script>
     </div>
 </body>
