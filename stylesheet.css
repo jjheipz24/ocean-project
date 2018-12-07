@@ -11,12 +11,14 @@ body {
     height: auto;
 }
 
+/* Holds content of the screen*/
 #mainContainer {
     width: 80%;
     margin: 0 10%;
     position: absolute;
 }
 
+/* Container for info on about and resources page */
 .mainContainerInfo {
     padding: 2.5% 0 2.5% 0;
     background-color: white;
@@ -26,7 +28,22 @@ body {
 h1 {
     font-size: 3em;
     display: flex;
+    color: white;
     justify-content: space-evenly;
+    margin-bottom: 0;
+    cursor: default;
+}
+
+h2 {
+    font-size: 1.15em;
+    color: white;
+    padding: .5em;
+    border-radius: 50px;
+}
+
+h2:hover {
+    cursor: pointer;
+    background-color: #03a0c3;
 }
 
 p {
@@ -35,11 +52,11 @@ p {
 
 a {
     color: white;
-    font-size: 1em;
+    font-size: 1.15em;
     text-decoration: none;
     /* Fill nav bar link */
     padding: .25em 1em;
-    border-radius: .5em;
+    border-radius: 50px;
 }
 
 a:hover {
@@ -78,11 +95,14 @@ a:hover {
 
 nav {
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    flex-direction: column;
+    justify-content:space-around;
     align-items: center;
+    padding: 0;
+    margin: 0;
 }
 
+/* Container for bubbles appearing in background */
 #bodyBubbles {
     position: absolute !important;
     /* Sizing so particles will feel natural on page; no excess border */
@@ -133,3 +153,10 @@ Code adapted from James C. on https://developer.microsoft.com/en-us/microsoft-ed
         display: block;
     }
 }
+
+.options {
+    display: none;
+    margin: 0;
+    padding: 0;
+}
+

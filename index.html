@@ -19,27 +19,47 @@
 </head>
 
 <body>
+
     <div id="bodyBubbles">
 
         <div id="mainContainer">
 
-            <h1><a href="https://ellamathewson.github.io/ocean-interaction/index.html">SEA WHAT YOU DID?</a></h1>
+
+            <h1>SEA WHAT YOU DID?</h1>
             <nav>
-                <a class="navLink" href="https://ellamathewson.github.io/ocean-interaction/about.html">About</a>
-                <a class="navLink" href="https://ellamathewson.github.io/ocean-interaction/resources.html">Resources</a>
+                <h2 onlick="dropdown()" class="dropButton">menu</h2>
+                <div class="options">
+                    <a class="navLink" href="">program</a>
+                    <a class="navLink" href="https://ellamathewson.github.io/ocean-interaction/about.html">about</a>
+                    <a class="navLink" href="https://ellamathewson.github.io/ocean-interaction/resources.html">resources</a>
+                    <!--
+                    <a class="navLink" href="#">Jin Jin Heipler</a>
+                    <a class="navLink" href="#">Ella Mathewson</a>
+-->
+                </div>
             </nav>
 
-        <article id="mobile">
-            <p>This interaction works best on screens larger than 768 pixels.
-                <br><br>
-                Feel free to browse the other pages!</p>
+            <script>
+                $(".dropButton").click(function() {
+                    $(".options").slideToggle();
+                })
+
+            </script>
+
+            <!-- Pop up menu that appears when screen is too small -->
+            <article id="mobile">
+                <p>This interaction works best on screens larger than 768 pixels.
+                    <br><br> Feel free to browse the other pages!</p>
             </article>
         </div>
 
+
+
         <script>
-            /* Code from Particles.js:
-                                    https://vincentgarreau.com/particles.js/
-                                */
+            /* Code adapted from Particles.js: https://vincentgarreau.com/particles.js/ */
+            /* This is the code for the particle.js library used */
+
+            /* SETS UP BUBBLES FROM LIBRARY */
             particlesJS("bodyBubbles", {
                 "particles": {
                     "number": {
@@ -142,34 +162,41 @@
                     }
                 },
             });
-        </script>
 
-        <script>
 
+
+            /* CODE FOR BUBBLES APPEARING ON PAGE */
+
+            //boolean to check screen size
             let checkScreen = false;
 
-            //while (window.innerWidth >= 768) {
-                if(window.innerWidth >= 768) {
+            //if window width is greater than value,
+            if (window.innerWidth >= 768) {
+                //boolean is false
                 checkScreen = false;
             } else {
+                //otherwise it is true
                 checkScreen = true;
             }
 
+            //if screen is greater than 768
             if (checkScreen == false) {
+                //bubbles will fade in
                 $('#bodyBubbles').hide();
                 $('#bodyBubbles').fadeIn(5000);
-                setTimeout(function() {
+                /*setTimeout(function() {
+                    //bubbles will stop after 5 seconds
                     window.pJSDom[0].pJS.particles.move.enable = false;
-                }, 5000);
+                }, 5000);*/
             } else {
-               // window.pJSDom[0].pJS.fn.vendors.destroypJS();
+                //if screen is smaller than value
+                // window.pJSDom[0].pJS.fn.vendors.destroypJS();
+                //have less bubbles on screen
                 window.pJSDom[0].pJS.particles.number.value = 25;
+                //fade in -- never stops
                 $('#bodyBubbles').hide();
                 $('#bodyBubbles').fadeIn(5000);
-                console.log("numChange");
             }
-            //console.log(window.innerWidth);
-
 
         </script>
     </div>
