@@ -5,6 +5,7 @@ window.onload = function() {
     base.backgroundColor = "0x007bb8";
     //base.scaleToWindow();
 
+
     base.start();
 
     function load() {

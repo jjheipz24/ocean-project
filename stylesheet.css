@@ -6,6 +6,7 @@
 
 canvas {
     margin: 20% 0 0 15%;
+    position: absolute;
 }
 
 .particles-js-canvas-el {
@@ -232,6 +233,10 @@ Code adapted from James C. on https://developer.microsoft.com/en-us/microsoft-ed
 
     #mobile {
         display: block;
+    }
+
+    canvas {
+        display: none;
     }
 }
 
