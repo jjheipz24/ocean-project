@@ -28,36 +28,24 @@
     <div id="bodyBubbles">
         <div id="mainContainer">
 
-        <h1>SEA WHAT YOU DID?</h1>
-        <nav>
-            <h2 onlick="dropdown()" class="dropButton">menu</h2>
-            <div class="options">
-                <a class="navLink" href="">program</a>
-                <a class="navLink" href="https://ellamathewson.github.io/ocean-interaction/about.html">about</a>
-                <a class="navLink" href="https://ellamathewson.github.io/ocean-interaction/resources.html">resources</a>
-                <!--
+            <h1>SEA WHAT YOU DID?</h1>
+            <nav>
+                <h2 onlick="dropdown()" class="dropButton">menu</h2>
+                <div class="options">
+                    <a class="navLink" href="">program</a>
+                    <a class="navLink" href="https://ellamathewson.github.io/ocean-interaction/about.html">about</a>
+                    <a class="navLink" href="https://ellamathewson.github.io/ocean-interaction/resources.html">resources</a>
+                    <!--
                     <a class="navLink" href="#">Jin Jin Heipler</a>
                     <a class="navLink" href="#">Ella Mathewson</a>
 -->
-            </div>
-        </nav>
-
-        <div id="ocean-program">
-            <div id="myPopUp" class="popUp">
-                <div class="popup-content">
-                    <span class="close">&times;</span>
-                    <p id="popup-text">Some text..</p>
                 </div>
-            </div>
-        </div>
-
-
+            </nav>
 
             <script>
                 $(".dropButton").click(function() {
                     $(".options").slideToggle();
                 })
-
             </script>
 
             <!-- Pop up menu that appears when screen is too small -->
@@ -205,6 +193,7 @@
 
             //if screen is greater than 768
             if (checkScreen == false) {
+
                 //bubbles will fade in
                 $('#bodyBubbles').hide();
                 $('#bodyBubbles').fadeIn(5000);
@@ -221,9 +210,19 @@
                 $('#bodyBubbles').hide();
                 $('#bodyBubbles').fadeIn(5000);
             }
-
         </script>
     </div>
+
+    <div id="ocean-program">
+        <div id="myPopUp" class="popUp">
+            <div class="popup-content">
+                <span class="close">&times;</span>
+                <p id="popup-text">Some text..</p>
+            </div>
+        </div>
+    </div>
+
+
 </body>
 
 </html>

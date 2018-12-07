@@ -4,11 +4,6 @@
     font-family: 'Nunito', sans-serif;
 }
 
-canvas {
-    margin: 20% 0 0 15%;
-    position: absolute;
-}
-
 .particles-js-canvas-el {
     margin: 0;
 }
@@ -162,8 +157,11 @@ article {
 }
 
 /*--------------- APPLICATION CSS --------------*/
+canvas {
+    margin: 25vh 0 0 27vw;
+    position: absolute;
+}
 
-#ocean-program {}
 
 /* POPUP TUTORIAL FROM W3SCHOOLS
         https://www.w3schools.com/howto/howto_css_modals.asp*/
@@ -179,7 +177,7 @@ article {
     /* Stay in place */
     z-index: 5;
     /* Sit on top */
-    padding-top: 200px;
+    padding-top: 35vh;
     /* Location of the box */
     left: 0;
     top: 0;
