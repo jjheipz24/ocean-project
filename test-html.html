@@ -265,6 +265,23 @@
                 }
                 popup.style.display = "block";
             }
+
+             /* HOOMANS POPUP */
+            boat.press = () => {
+                if (ocean == trashPollution) {
+                    popText.innerHTML = "The plastic water bottles we throw into the ocean can come back to haunt ua. The toxins in the plastic we use affects our health and can cause cancer.";
+                }
+                else if(ocean == oilSpill){
+                    popText.innerHTML = "Oh no! There goes our food. When oil spills happen, we can't go fishing because the fish are all gone. A lot of the population relies on fish for their food. What are we supposed to do?";
+                }
+                else if(ocean == chemSpill){
+                    popText.innerHTML = "Something tastes wrong with our food! When chemicals seep into the ocean, the plant and animal life we eat gets into our diet and our bodies."
+                }
+                else {
+                    popText.innerHTML = "Hello! I'm a man-made boat. I represent all of us on planet Earth.";
+                }
+                popup.style.display = "block";
+            }
             span.onclick = function() {
                 popup.style.display = "none";
             }
