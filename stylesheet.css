@@ -166,8 +166,6 @@ canvas {
 /* POPUP TUTORIAL FROM W3SCHOOLS
         https://www.w3schools.com/howto/howto_css_modals.asp*/
 
-/* The PopUp (background) */
-
 /*Popup background */
 
 .popUp {
@@ -198,7 +196,7 @@ canvas {
 .popup-content {
     background-color: #007bb8;
     border-radius: 25px;
-    margin: 0 30%;
+    margin-left: 26vw;
     padding: 20px 40px 40px 40px;
     border: 5px solid #003449;
     width: 40vw;
