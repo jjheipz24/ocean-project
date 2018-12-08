@@ -30,7 +30,6 @@ body {
 .mainContainerInfo {
     padding: 2.5% 0 2.5% 0;
     background-color: white;
-    height: 90%;
     z-index: 1000;
 }
 
