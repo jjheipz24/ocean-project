@@ -33,6 +33,26 @@ body {
     z-index: 1000;
 }
 
+#imageDisplay {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.sketch {
+    margin: 10px;
+}
+/*
+.sketch {
+    margin-left: 30%;
+}
+
+.sketchWide {
+    margin-left: 20%;
+}
+*/
+
 h1 {
     font-size: 3em;
     display: flex;
