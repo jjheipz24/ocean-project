@@ -124,11 +124,16 @@ a:hover {
     padding: 0;
     border-radius: 0;
     text-decoration: underline;
+    font-size: 1em;
 }
 
 .inText:hover {
     background-color: white;
     color: #ff6501;
+}
+
+#sourcesDiv {
+    margin-left: 50px;
 }
 
 nav {
