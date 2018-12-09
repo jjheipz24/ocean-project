@@ -30,9 +30,28 @@ body {
 .mainContainerInfo {
     padding: 2.5% 0 2.5% 0;
     background-color: white;
-    height: 90%;
     z-index: 1000;
 }
+
+#imageDisplay {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.sketch {
+    margin: 5px;
+}
+/*
+.sketch {
+    margin-left: 30%;
+}
+
+.sketchWide {
+    margin-left: 20%;
+}
+*/
 
 h1 {
     font-size: 3em;
@@ -105,11 +124,16 @@ a:hover {
     padding: 0;
     border-radius: 0;
     text-decoration: underline;
+    font-size: 1em;
 }
 
 .inText:hover {
     background-color: white;
     color: #ff6501;
+}
+
+#sourcesDiv {
+    margin-left: 50px;
 }
 
 nav {

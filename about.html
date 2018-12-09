@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
 
-<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.js"></script>
     <!-- particles.js lib - https://github.com/VincentGarreau/particles.js -->
     <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
@@ -37,23 +37,58 @@
                 $(".dropButton").click(function() {
                     $(".options").slideToggle();
                 })
-
             </script>
 
             <article>
                 <p>
-                    The goal of this project is to create an engaging and educational website to teach about the effects of various types of ocean pollution on marine life.
+                    The goal of this project is to create an engaging and educational website to teach about the effects of various types of ocean pollution on marine life. Our intended audience is focused primarily on a younger age group, but can be used by anyone, as the graphics and content are simple enough for everyone to enjoy and understand.
+                </p>
+                <p>
+                    Sketches / Wireframes:
                 </p>
 
-                <p>This program features a 2D graphic of the ocean. It has three graphics within it to represent plant life, animal life, and us. It also features graphics of trash, oil, and chemicals on the side. The user is able to click and drag one of the pollution graphics into the ocean. When this happens, the ocean graphic will change to imply the pollution has affected it. Hovering over the three graphics within the ocean, the user is able to click on them and an info box appears, explaining how the pollution has affected it. Afterwards, a button appears at the bottom of the page which resets the scene.
+                <div id="imageDisplay">
+                    <img class="sketch" alt="Home screen program" src="images/sketchHome.jpg">
+                    <img class="sketch" alt="Mobile view" src="images/sketchMobile.jpg">
+                    <img class="sketch" alt="Wireframe of site" src="images/sketchWireframe.jpg">
+                    <img class="sketch" alt="About page" src="images/sketchAbout.jpg">
+                    <img class="sketch" alt="Resources page" src="images/sketchResources.jpg">
+                </div>
+
+                <p>The design choices we made were based on the intention of the program being fun and friendly to the user. The bold color, simple graphics, and sans-serif font all add to the theme of being an underwater scene that's energetic and welcoming. Since our goal was to educate others about ocean pollution, we wanted this education to be accessible to all ages. Thus, keeping the design simple and vibrant, we are able to do so.
                 </p>
+
+                <p>
+                    Sources:
+                </p>
+                <div id="sourcesDiv">
+                    <p>
+                        <a class="inText" href="https://vincentgarreau.com/particles.js/">Particle.js</a> is a JavaScript library created by Vincent Garreau as a way to create particles. This was used to make the bubbles flowing in the background of the pages. It was modified to only include the code for the bubbles, and changed to create the size, amount, color, opacity, and direction that they flow in.
+                    </p>
+
+                    <p>
+                        <a class="inText" href="https://github.com/kittykatattack/hexi">Hexi.js</a> is the second JavaScript library used in this program to create the main graphic. The library was created by kittykatattack on GitHub in order to create HTML5 games.
+                    </p>
+                </div>
+
+                <p>
+                    Ella worked mostly on the HTML and CSS for the web pages, along with integrating the bubbles in the background using particle.js. Jin Jin worked mostly on the interactive program using Hexi.js. Along with this, Ella added the content for this about page, and Jin Jin added content to the resources page. Together we worked on adding the content to the interactive graphic, as well as integrating the graphic onto the webpage.
+                </p>
+
+                <p>
+                    One thing we learned about while creating this site was how to integrate JavaScript into HTML and CSS files from an externally linked page. It proved to be difficult to combine our two parts together, and required a lot of research on how JavaScript canvases work on HTML pages. Along with this we had a problem with the interactivity of the program not working when we put it on the page. Once we realized that the interactivity was behind the particle.js canvas, we were able to position: absolute it to be on top.
+                </p>
+
+                <p>
+
+                </p>
+
+
             </article>
 
 
             <script>
-                /* Code from Particles.js:
-                                            https://vincentgarreau.com/particles.js/
-                                        */
+                /* Code from Particles.js: https://vincentgarreau.com/particles.js/ */
                 particlesJS("bodyBubbles", {
                     "particles": {
                         "number": {
@@ -156,7 +191,6 @@
                         }
                     },
                 });
-
             </script>
 
         </div>
