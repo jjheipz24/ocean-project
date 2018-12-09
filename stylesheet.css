@@ -43,15 +43,7 @@ body {
 .sketch {
     margin: 5px;
 }
-/*
-.sketch {
-    margin-left: 30%;
-}
 
-.sketchWide {
-    margin-left: 20%;
-}
-*/
 
 h1 {
     font-size: 3em;
@@ -119,12 +111,24 @@ a:hover {
     font-size: 1.5em;
 }
 
+#resource-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.resource {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
 .inText {
     color: #007bb8;
     padding: 0;
     border-radius: 0;
     text-decoration: underline;
-    font-size: 1em;
+    font-size: 1.3em;
+    margin-right: 3vw;
 }
 
 .inText:hover {
@@ -146,6 +150,7 @@ nav {
     position: relative;
     z-index: 1000;
 }
+
 
 /* Container for bubbles appearing in background */
 
@@ -279,6 +284,10 @@ Code adapted from James C. on https://developer.microsoft.com/en-us/microsoft-ed
 
     canvas {
         display: none;
+    }
+
+    .resource {
+        flex-direction: column;
     }
 }
 
