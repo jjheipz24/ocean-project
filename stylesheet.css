@@ -66,6 +66,18 @@ h2:hover {
     background-color: #03a0c3;
 }
 
+/*navigation bar formatting*/
+nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    z-index: 1000;
+}
+
 #infoDropButton {
     color: #007bb8;
 }
@@ -111,6 +123,7 @@ a:hover {
     font-size: 1.5em;
 }
 
+/*formatting for Resources page*/
 #resource-content {
     display: flex;
     flex-direction: column;
@@ -144,16 +157,13 @@ a:hover {
     margin-left: 50px;
 }
 
-nav {
+/*formatting for about page*/
+#about-content {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    padding: 0;
-    margin: 0;
-    position: relative;
-    z-index: 1000;
 }
+
+
 
 
 /* Container for bubbles appearing in background */
