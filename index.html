@@ -30,18 +30,15 @@
 
             <h1>SEA WHAT YOU DID?</h1>
             <nav>
-                <h2 onlick="dropdown()" class="dropButton">menu</h2>
+                <h2 onlick="dropdown()" class="dropButton" title="menu">menu</h2>
                 <div class="options">
-                    <a class="navLink" href="">program</a>
-                    <a class="navLink" href="https://ellamathewson.github.io/ocean-interaction/about.html">about</a>
-                    <a class="navLink" href="https://ellamathewson.github.io/ocean-interaction/resources.html">resources</a>
-                    <!--
-                    <a class="navLink" href="#">Jin Jin Heipler</a>
-                    <a class="navLink" href="#">Ella Mathewson</a>
--->
+                    <a class="navLink" href="" title="program">program</a>
+                    <a class="navLink" href="https://ellamathewson.github.io/ocean-interaction/about.html" title="about">about</a>
+                    <a class="navLink" href="https://ellamathewson.github.io/ocean-interaction/resources.html" title="resources">resources</a>
                 </div>
             </nav>
 
+            <!--Script for making nav bar dropdown-->
             <script>
                 $(".dropButton").click(function() {
                     $(".options").slideToggle();
@@ -56,17 +53,6 @@
             </article>
         </div>
 
-        <!--
-        <div id="ocean-program">
-            <script src="app.js"></script>
-            <div id="myPopUp" class="popUp">
-                <div class="popup-content">
-                    <span class="close">&times;</span>
-                    <p id="popup-text">Some text..</p>
-                </div>
-            </div>
-        </div>
--->
 
         <script>
             /* Code adapted from Particles.js: https://vincentgarreau.com/particles.js/ */
@@ -212,27 +198,10 @@
                 $('#bodyBubbles').fadeIn(5000);
             }
 
-//            let valHeight = 25;
-//            let valWidth = 27;
-//
-//            window.addEventListener("resize", blarg);
-//
-//            function blarg() {
-//                valHeight -= .5;
-//                valWidth -= .5;
-//                console.log(valWidth);
-//                document.getElementsByName("canvas").style.marginTop = valHeight + "vh";
-//                document.getElementsByTagName("canvas").style.marginLeft = valWidth + "vw";
-//            }
-
-            //            $(window).on("resize", function() {
-            //                $("canvas").css({'margin-top':'15vh'});
-            //                $("canvas").css({'margin-left':'15vw'});
-            //            })
-
         </script>
     </div>
 
+    <!--Div used to hold all of the popups on the application-->
     <div id="ocean-program">
         <div id="myPopUp" class="popUp">
             <div class="popup-content">
