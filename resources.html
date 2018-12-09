@@ -23,23 +23,22 @@
 
             <h1 class="aInfo">SEA WHAT YOU DID?</h1>
             <nav>
-                <h2 onlick="dropdown()" class="dropButton" id="infoDropButton">menu</h2>
+                <h2 onlick="dropdown()" class="dropButton" id="infoDropButton" title="menu">menu</h2>
                 <div class="options">
-                    <a class="aInfoLink" href="">program</a>
-                    <a class="aInfoLink" href="https://ellamathewson.github.io/ocean-interaction/about.html">about</a>
-                    <a class="aInfoLink" href="https://ellamathewson.github.io/ocean-interaction/resources.html">resources</a>
+                    <a class="aInfoLink" href="" title="program">program</a>
+                    <a class="aInfoLink" href="https://ellamathewson.github.io/ocean-interaction/about.html" title="about">about</a>
+                    <a class="aInfoLink" href="https://ellamathewson.github.io/ocean-interaction/resources.html" title="resources">resources</a>
                     <!--
                     <a class="navLink" href="#">Jin Jin Heipler</a>
                     <a class="navLink" href="#">Ella Mathewson</a>
 -->
                 </div>
             </nav>
-
+            <!--Script for dropdown menu in nav bar-->
             <script>
                 $(".dropButton").click(function() {
                     $(".options").slideToggle();
                 })
-
             </script>
 
             <article>
@@ -48,18 +47,23 @@
                     <p>
                         There are many things you can do to help make an impact on our oceans.
                     </p>
-                    <p><a class="inText" href="https://oceana.org/">Oceana</a>, an international organization, is dedicated to help protect the oceans and make sure the vast biodiversity in our oceans does not get destroyed. You can join their emailing list or give a small donation to their cause. Also on their site you can read all about their campaigns and how you can live sustainably.
-                    </p>
-                    <p>
-                        <a class="inText" href="https://www.greenpeace.org/usa/" target="_blank">Greenpeace</a> is an organization devoted to fighting for a heathy planet. They have many campaigns and petitions you can sign to help their organization fight. Along with this, they are promoting telling your representative to protect our oceans over oil profits. The link to contact yours is <a class="inText" href="https://engage.us.greenpeace.org/onlineactions/EHWq6uI9N0uLKbds_FXyVQ2?utm_source=website&utm_medium=actioncard&utm_campaign=171116_secure-act_actioncard&sourceid=1000824&_ga=2.42407462.22927519.1543793186-1680747245.1543793186" target="_blank">here</a>.
-                    </p>
+                    <div id="resource-content">
+                        <p><a class="inText" href="https://oceana.org/" target="_blank" title="Oceana.org">Oceana</a>, an international organization, is dedicated to help protect the oceans and make sure the vast biodiversity in our oceans does not get destroyed. You can join their emailing list or give a small donation to their cause. Also on their site you can read all about their campaigns and how you can live sustainably.
+                        </p>
+                        <p>
+                            <a class="inText" href="https://www.greenpeace.org/usa/" target="_blank" title="Greenpeace.org">Greenpeace</a> is an organization devoted to fighting for a heathy planet. They have many campaigns and petitions you can sign to help their organization fight. Along with this, they are promoting telling your representative to protect our oceans over oil profits. The link to contact yours is <a class="inText" href="https://engage.us.greenpeace.org/onlineactions/EHWq6uI9N0uLKbds_FXyVQ2?utm_source=website&utm_medium=actioncard&utm_campaign=171116_secure-act_actioncard&sourceid=1000824&_ga=2.42407462.22927519.1543793186-1680747245.1543793186" target="_blank">here</a>.
+                        </p>
+                        <p>
+                            <a class="inText" href="https://plasticoceans.org" target="_blank" title="Plasticoceans.org">Plastic Oceans</a> is another organization dedicated to ending plastic pollution. Their goals are to inform the public about plastic pollution, inspire people to care, and spark action that will act as real solutions. On their site, they have information on the projects they are currently involved with and list additional resources.
+                        </p>
+                    </div>
                 </div>
             </article>
 
             <script>
                 /* Code from Particles.js:
-                                                            https://vincentgarreau.com/particles.js/
-                                                        */
+                https://vincentgarreau.com/particles.js/
+                */
                 particlesJS("bodyBubbles", {
                     "particles": {
                         "number": {
@@ -162,7 +166,6 @@
                         }
                     },
                 });
-
             </script>
 
         </div>
