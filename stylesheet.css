@@ -128,6 +128,10 @@ a:hover {
     border-radius: 0;
     text-decoration: underline;
     font-size: 1.3em;
+
+}
+
+.resource-link {
     margin-right: 3vw;
 }
 
