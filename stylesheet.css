@@ -1,0 +1,312 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+* {
+    font-family: 'Nunito', sans-serif;
+}
+
+.particles-js-canvas-el {
+    margin: 0;
+}
+
+body {
+    background-color: #007bb8;
+    /*background: linear-gradient(270deg, #007bb8, #004f77);*/
+    width: auto;
+    height: auto;
+
+}
+
+
+/* Holds content of the screen*/
+
+#mainContainer {
+    width: 80%;
+    margin: 0 10%;
+    position: absolute;
+}
+
+/* Container for info on about and resources page */
+
+.mainContainerInfo {
+    padding: 2.5% 0 2.5% 0;
+    background-color: white;
+    z-index: 1000;
+}
+
+#imageDisplay {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.sketch {
+    margin: 5px;
+}
+
+
+h1 {
+    font-size: 3em;
+    display: flex;
+    color: white;
+    justify-content: space-evenly;
+    margin-bottom: 0;
+    cursor: default;
+}
+
+h2 {
+    font-size: 1.15em;
+    color: white;
+    padding: .5em;
+    border-radius: 50px;
+}
+
+h2:hover {
+    cursor: pointer;
+    background-color: #03a0c3;
+}
+
+/*navigation bar formatting*/
+nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    z-index: 1000;
+}
+
+#infoDropButton {
+    color: #007bb8;
+}
+
+#infoDropButton:hover {
+    color: white;
+    cursor: pointer;
+    background-color: #03a0c3;
+}
+
+p {
+    font-size: 1.15em;
+}
+
+a {
+    color: white;
+    font-size: 1.15em;
+    text-decoration: none;
+    /* Fill nav bar link */
+    padding: .25em 1em;
+    border-radius: 50px;
+}
+
+a:hover {
+    background-color: #03a0c3;
+}
+
+.navLink {
+    font-size: 1.5em;
+}
+
+.aInfo,
+.aInfoLink {
+    color: #007bb8;
+}
+
+.aInfoLink:hover {
+    color: white;
+
+}
+
+.aInfoLink {
+    font-size: 1.5em;
+}
+
+/*formatting for Resources page*/
+#resource-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.resource {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.inText {
+    color: #007bb8;
+    padding: 0;
+    border-radius: 0;
+    text-decoration: underline;
+    font-size: 1.3em;
+
+}
+
+.resource-link {
+    margin-right: 3vw;
+}
+
+.inText:hover {
+    background-color: white;
+    color: #ff6501;
+}
+
+#sourcesDiv {
+    margin-left: 50px;
+}
+
+/*formatting for about page*/
+#about-content {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+/* Container for bubbles appearing in background */
+
+#bodyBubbles {
+    position: absolute !important;
+    /* Sizing so particles will feel natural on page; no excess border */
+    width: 100%;
+    height: 100%;
+    margin: -10px 0 0 -10px;
+    padding: 0;
+}
+
+article {
+    width: 80%;
+    margin: 0 10%;
+    padding: 1em 0;
+}
+
+#textIndent {
+    padding-left: 20px;
+}
+
+#mobile {
+    display: none;
+    color: black;
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    background-color: white;
+    padding: 5%;
+    margin-top: 5%;
+    border-radius: 25px;
+}
+
+/*--------------- APPLICATION CSS --------------*/
+canvas {
+    margin: 28vh 0 0 17vw;
+    position: absolute;
+}
+
+
+/* POPUP TUTORIAL FROM W3SCHOOLS
+        https://www.w3schools.com/howto/howto_css_modals.asp*/
+
+/*Popup background */
+
+.popUp {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 5;
+    /* Sit on top */
+    padding-top: 35vh;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100vw;
+    /* Full width */
+    height: 100vh;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+/* Popup Box */
+
+.popup-content {
+    background-color: #007bb8;
+    border-radius: 25px;
+    margin-left: 26vw;
+    padding: 20px 40px 40px 40px;
+    border: 5px solid #003449;
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+/*Popup text*/
+
+#popup-text {
+    font-family: 'Nunito', sans-serif;
+    color: white;
+    font-size: 20px;
+}
+
+
+/* The Close Button */
+
+.close {
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    margin-left: 100%;
+    margin-top: -10px;
+}
+
+.close:hover,
+.close:focus {
+    color: #aaaaaa;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Microsoft Edge only; justify content: space-evenly does not work in this window.
+Code adapted from James C. on https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/15947692/ */
+
+@supports (-ms-ime-align:auto) {
+
+    nav,
+    h1 {
+        margin-left: 5%;
+        justify-content: space-around;
+        /* you can also add some other adjustments to size, margins etc to get the same positioning */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 6vw;
+    }
+
+    #mobile {
+        display: block;
+    }
+
+    canvas {
+        display: none;
+    }
+
+    .resource {
+        flex-direction: column;
+    }
+}
+
+.options {
+    display: none;
+    margin: 0;
+    padding: 0;
+}

@@ -1,0 +1,58 @@
+<svg id="trashbag" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256.91 449.98">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #313335;
+        stroke: #000;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-2, .cls-4 {
+        fill: none;
+        stroke: #999;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .cls-2 {
+        stroke-width: 5px;
+      }
+
+      .cls-3 {
+        fill: #1c1c1c;
+      }
+
+      .cls-4 {
+        stroke-width: 4px;
+      }
+
+      .cls-5 {
+        font-size: 72px;
+        fill: #fff;
+        font-family: Nunito-Regular, Nunito;
+      }
+
+      .cls-6 {
+        letter-spacing: -0.08em;
+      }
+
+      .cls-7 {
+        letter-spacing: 0em;
+      }
+    </style>
+  </defs>
+  <title>trashbag</title>
+  <path class="cls-1" d="M439.47,588.5h.06c1.71-.27,69.48-10.94,109-7,40,4,77-18,67-68s12-41,7-68-6-69-25-90c-18.77-20.75-69.76-33.69-71.94-54.25a1.26,1.26,0,0,1,.57-1.17l48.38-32.26a1.27,1.27,0,0,0-.92-2.31L547.65,270a1.27,1.27,0,0,1-1.23-2l16-21.29a1.27,1.27,0,0,0-1.57-1.91l-41.36,19.82a1.28,1.28,0,0,1-1.82-1.23l1.51-22.54a1.27,1.27,0,0,0-2.36-.73L495.5,275.83a1.28,1.28,0,0,1-2.13.09l-21.56-30.19a1.27,1.27,0,0,0-2.31.74v30.79a1.27,1.27,0,0,1-1.92,1.09L427.71,254.6a1.27,1.27,0,0,0-1.68,1.84l35.63,49.88a1.26,1.26,0,0,1-.45,1.86c-9.81,5.07-55.14,26.91-70.71,59.32-20.06,41.76-1,55-15,78C351.88,484.37,381.49,595.62,439.47,588.5Z" transform="translate(-366.84 -238.94)"/>
+  <line class="cls-2" x1="95.16" y1="65.56" x2="159.16" y2="65.56"/>
+  <path class="cls-3" d="M399,558s20,30,42,25Z" transform="translate(-366.84 -238.94)"/>
+  <path class="cls-3" d="M585.92,381.55c-3.1-1.82-21.86,54.87-48.74,50.46Z" transform="translate(-366.84 -238.94)"/>
+  <path class="cls-3" d="M607.54,470.27,610,524s-8.78,18.71-19.13,26S607.54,470.27,607.54,470.27Z" transform="translate(-366.84 -238.94)"/>
+  <path class="cls-3" d="M375,459.68c-4.51,10.87-8.79,28.59,1.63,42.89a1.44,1.44,0,0,0,2.59-.84l.6-41A2.51,2.51,0,0,0,375,459.68Z" transform="translate(-366.84 -238.94)"/>
+  <path class="cls-4" d="M517.87,304.37s34.14,26.05,42,64.56,33.25,68.7,33.25,68.7" transform="translate(-366.84 -238.94)"/>
+  <path class="cls-3" d="M457.88,381l-21.81-24C434.62,357.89,452,383.14,457.88,381Z" transform="translate(-366.84 -238.94)"/>
+  <path class="cls-3" d="M450.44,479.37s29.94,27.78,44.09,18.85Z" transform="translate(-366.84 -238.94)"/>
+  <path class="cls-3" d="M529.12,277.43c-.17-.47-11.06,11.14-13.35,17.51Z" transform="translate(-366.84 -238.94)"/>
+  <path class="cls-3" d="M489.86,277.22c-.43-.18-1.16,12.63,1.23,17.61Z" transform="translate(-366.84 -238.94)"/>
+  <path class="cls-3" d="M466.08,282.49c.29-.34,6.57,7.48,6.72,11.88Z" transform="translate(-366.84 -238.94)"/>
+  <text class="cls-5" transform="translate(45.66 430.18)"><tspan class="cls-6">T</tspan><tspan class="cls-7" x="37.58" y="0">r</tspan><tspan x="62.71" y="0">ash</tspan></text>
+</svg>

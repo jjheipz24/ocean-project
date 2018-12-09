@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+
+
+    <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+
+    <!-- particles.js lib - https://github.com/VincentGarreau/particles.js -->
+    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <!-- Hexi.js library for app-->
+    <script src="hexi.min.js"></script>
+    <script src="app.js"></script>
+    <script src="app.js"></script>
+
+
+
+    <title>Ocean Intearction</title>
+
+
+</head>
+
+<body>
+    <div id="bodyBubbles">
+        <div id="mainContainer">
+
+            <h1>SEA WHAT YOU DID?</h1>
+            <nav>
+                <h2 class="dropButton" title="menu">menu</h2>
+                <div class="options">
+                    <a class="navLink" href="index.html" title="program">program</a>
+                    <a class="navLink" href="about.html" title="about">about</a>
+                    <a class="navLink" href="resources.html" title="resources">resources</a>
+                </div>
+            </nav>
+
+            <!--Script for making nav bar dropdown-->
+            <script>
+                $(".dropButton").click(function() {
+                    $(".options").slideToggle();
+                })
+            </script>
+
+            <!-- Pop up menu that appears when screen is too small -->
+            <article id="mobile">
+                <h3>Oops! Your screen appears to be too small</h3>
+                <p>The application you're trying to see only works on screens larger than 768 pixels.
+                    <br><br> Feel free to browse the other pages!</p>
+            </article>
+        </div>
+
+
+        <script>
+            /* Code adapted from Particles.js: https://vincentgarreau.com/particles.js/ */
+            /* This is the code for the particle.js library used */
+
+            /* SETS UP BUBBLES FROM LIBRARY */
+            particlesJS("bodyBubbles", {
+                "particles": {
+                    "number": {
+                        "value": 75,
+                        "density": {
+                            "enable": false,
+                            "value_area": 800
+                        }
+                    },
+                    "color": {
+                        "value": "#ffffff"
+                        //#03a0c3
+                    },
+                    "shape": {
+                        "type": "circle",
+                        "stroke": {
+                            "width": 0,
+                            "color": "#ffffff"
+
+                        },
+                        "polygon": {
+                            "nb_sides": 12
+                        },
+                    },
+                    "opacity": {
+                        "value": 0.4,
+                        "random": false,
+                        "anim": {
+                            "enable": false,
+                            "speed": 1,
+                            "opacity_min": 0.1,
+                            "sync": false
+                        }
+                    },
+                    "size": {
+                        "value": 35.51164387345227,
+                        "random": true,
+                        "anim": {
+                            "enable": false,
+                            "speed": 33.56643356643357,
+                            "size_min": 0.1,
+                            "sync": false
+                        }
+                    },
+                    "line_linked": {
+                        "enable": false,
+                    },
+                    "move": {
+                        "enable": true,
+                        "speed": 6,
+                        "direction": "top",
+                        "random": false,
+                        "straight": false,
+                        "out_mode": "out",
+                        "bounce": false,
+                        "attract": {
+                            "enable": false,
+                            "rotateX": 600,
+                            "rotateY": 1200
+                        }
+                    }
+                },
+                "interactivity": {
+                    "detect_on": "canvas",
+                    "events": {
+                        "onhover": {
+                            "enable": false,
+                            "mode": "repulse"
+                        },
+                        "onclick": {
+                            "enable": false,
+                            "mode": "push"
+                        },
+                        "resize": true
+                    },
+                    "modes": {
+                        "grab": {
+                            "distance": 400,
+                            "line_linked": {
+                                "opacity": 1
+                            }
+                        },
+                        "bubble": {
+                            "distance": 400,
+                            "size": 40,
+                            "duration": 2,
+                            "opacity": 8,
+                            "speed": 3
+                        },
+                        "repulse": {
+                            "distance": 200,
+                            "duration": 0.4
+                        },
+                        "push": {
+                            "particles_nb": 4
+                        },
+                        "remove": {
+                            "particles_nb": 1
+                        }
+                    }
+                },
+            });
+
+
+
+            /* CODE FOR BUBBLES APPEARING ON PAGE */
+
+            //boolean to check screen size
+            let checkScreen = false;
+
+            //if window width is greater than value,
+            if (window.innerWidth >= 768) {
+                //boolean is false
+                checkScreen = false;
+            } else {
+                //otherwise it is true
+                checkScreen = true;
+            }
+
+            //if screen is greater than 768
+            if (checkScreen == false) {
+
+                //bubbles will fade in
+                $('#bodyBubbles').hide();
+                $('#bodyBubbles').fadeIn(5000);
+                /*setTimeout(function() {
+                    //bubbles will stop after 5 seconds
+                    window.pJSDom[0].pJS.particles.move.enable = false;
+                }, 5000);*/
+            } else {
+                //if screen is smaller than value
+                // window.pJSDom[0].pJS.fn.vendors.destroypJS();
+                //have less bubbles on screen
+                window.pJSDom[0].pJS.particles.number.value = 25;
+                //fade in -- never stops
+                $('#bodyBubbles').hide();
+                $('#bodyBubbles').fadeIn(5000);
+            }
+        </script>
+    </div>
+
+    <!--Div used to hold all of the popups on the application-->
+    <div id="ocean-program">
+        <div id="myPopUp" class="popUp">
+            <div class="popup-content">
+                <span class="close">&times;</span>
+                <p id="popup-text">Some text..</p>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

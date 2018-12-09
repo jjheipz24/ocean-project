@@ -1,0 +1,25 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 389 111.11">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #674927;
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #3c2415;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-3 {
+        fill: #3c2415;
+      }
+    </style>
+  </defs>
+  <title>lizProjectBoat</title>
+  <path class="cls-1" d="M124,238s28,69.5,110.5,94c0,0,155.5,25,278.5,0V238Z" transform="translate(-124 -232)"/>
+  <path class="cls-2" d="M203.5,306s180.5,43.5,299,0" transform="translate(-124 -232)"/>
+  <path class="cls-2" d="M175,280s205.5,46,325.5,0" transform="translate(-124 -232)"/>
+  <path class="cls-2" d="M155,256.5c9.15,1.66,228.57,46.91,345.5,0" transform="translate(-124 -232)"/>
+  <rect class="cls-3" width="389" height="6"/>
+</svg>

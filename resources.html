@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+
+    <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+
+
+    <!-- particles.js lib - https://github.com/VincentGarreau/particles.js -->
+    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+    <title>Resources</title>
+</head>
+
+<body>
+    <div id="bodyBubbles">
+
+        <div class="mainContainerInfo" id="mainContainer">
+
+            <h1 class="aInfo">SEA WHAT YOU DID?</h1>
+            <nav>
+                <h2 class="dropButton" id="infoDropButton" title="menu">menu</h2>
+                <div class="options">
+                    <a class="aInfoLink" href="index.html" title="program">program</a>
+                    <a class="aInfoLink" href="about.html" title="about">about</a>
+                    <a class="aInfoLink" href="resources.html" title="resources">resources</a>
+                    <!--
+                    <a class="navLink" href="#">Jin Jin Heipler</a>
+                    <a class="navLink" href="#">Ella Mathewson</a>
+-->
+                </div>
+            </nav>
+            <!--Script for dropdown menu in nav bar-->
+            <script>
+                $(".dropButton").click(function() {
+                    $(".options").slideToggle();
+                })
+
+            </script>
+
+            <article>
+                <h3>How can you help?</h3>
+                <div id="textIndent">
+                    <p>
+                        There are many things you can do to help make an impact on our oceans.
+                    </p>
+                    <div id="resource-content">
+                        <div class="resource">
+                            <a class="inText resource-link" href="https://oceana.org/" target="_blank" title="Oceana.org">Oceana</a>
+                            <p> Oceana is an international organization, is dedicated to help protect the oceans and make sure the vast biodiversity in our oceans does not get destroyed. You can join their emailing list or give a small donation to their cause. Also on their site you can read all about their campaigns and how you can live sustainably.
+                            </p>
+                        </div>
+                        <div class="resource">
+                            <a class="inText resource-link" href="https://www.greenpeace.org/usa/" target="_blank" title="Greenpeace.org">Greenpeace</a>
+                            <p>
+                                Greenpeace is an organization devoted to fighting for a heathy planet. They have many campaigns and petitions you can sign to help their organization fight. Along with this, they are promoting telling your representative to protect our oceans over oil profits.
+                            </p>
+                        </div>
+                        <div class="resource">
+                            <a class="inText resource-link" href="https://plasticoceans.org" target="_blank" title="Plasticoceans.org">Plastic Oceans</a>
+                            <p>
+                                Plastic Oceans is another organization dedicated to ending plastic pollution. Their goals are to inform the public about plastic pollution, inspire people to care, and spark action that will act as real solutions. On their site, they have information on the projects they are currently involved with and list additional resources.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <script>
+                /* Code from Particles.js:
+                https://vincentgarreau.com/particles.js/
+                */
+                particlesJS("bodyBubbles", {
+                    "particles": {
+                        "number": {
+                            "value": 75,
+                            "density": {
+                                "enable": false,
+                                "value_area": 800
+                            }
+                        },
+                        "color": {
+                            "value": "#ffffff"
+                            //#03a0c3
+                        },
+                        "shape": {
+                            "type": "circle",
+                            "stroke": {
+                                "width": 0,
+                                "color": "#ffffff"
+
+                            },
+                            "polygon": {
+                                "nb_sides": 12
+                            },
+                        },
+                        "opacity": {
+                            "value": 0.4,
+                            "random": false,
+                            "anim": {
+                                "enable": false,
+                                "speed": 1,
+                                "opacity_min": 0.1,
+                                "sync": false
+                            }
+                        },
+                        "size": {
+                            "value": 35.51164387345227,
+                            "random": true,
+                            "anim": {
+                                "enable": false,
+                                "speed": 33.56643356643357,
+                                "size_min": 0.1,
+                                "sync": false
+                            }
+                        },
+                        "line_linked": {
+                            "enable": false,
+                        },
+                        "move": {
+                            "enable": true,
+                            "speed": 6,
+                            "direction": "top",
+                            "random": false,
+                            "straight": false,
+                            "out_mode": "out",
+                            "bounce": false,
+                            "attract": {
+                                "enable": false,
+                                "rotateX": 600,
+                                "rotateY": 1200
+                            }
+                        }
+                    },
+                    "interactivity": {
+                        "detect_on": "canvas",
+                        "events": {
+                            "onhover": {
+                                "enable": false,
+                                "mode": "repulse"
+                            },
+                            "onclick": {
+                                "enable": false,
+                                "mode": "push"
+                            },
+                            "resize": true
+                        },
+                        "modes": {
+                            "grab": {
+                                "distance": 400,
+                                "line_linked": {
+                                    "opacity": 1
+                                }
+                            },
+                            "bubble": {
+                                "distance": 400,
+                                "size": 40,
+                                "duration": 2,
+                                "opacity": 8,
+                                "speed": 3
+                            },
+                            "repulse": {
+                                "distance": 200,
+                                "duration": 0.4
+                            },
+                            "push": {
+                                "particles_nb": 4
+                            },
+                            "remove": {
+                                "particles_nb": 1
+                            }
+                        }
+                    },
+                });
+
+            </script>
+
+        </div>
+    </div>
+</body>
+
+</html>
