@@ -4,21 +4,20 @@
     font-family: 'Nunito', sans-serif;
 }
 
+/* Removes spacing between bubble canvas and window */
 .particles-js-canvas-el {
     margin: 0;
 }
 
+/* Sets background color, width, and height of page */
 body {
     background-color: #007bb8;
     /*background: linear-gradient(270deg, #007bb8, #004f77);*/
     width: auto;
     height: auto;
-
 }
 
-
-/* Holds content of the screen*/
-
+/* Holds content of the screen, centers it on page */
 #mainContainer {
     width: 80%;
     margin: 0 10%;
@@ -26,13 +25,13 @@ body {
 }
 
 /* Container for info on about and resources page */
-
 .mainContainerInfo {
     padding: 2.5% 0 2.5% 0;
     background-color: white;
     z-index: 1000;
 }
 
+/* Displaying the sketches of the program */
 #imageDisplay {
     display: flex;
     flex-direction: row;
@@ -40,11 +39,12 @@ body {
     justify-content: center;
 }
 
+/* Spaces out images if they wrap on page */
 .sketch {
     margin: 5px;
 }
 
-
+/* Sets font size, uses flexbox to center it on page */
 h1 {
     font-size: 3em;
     display: flex;
@@ -54,6 +54,7 @@ h1 {
     cursor: default;
 }
 
+/* Used for menu button; sets size and color */
 h2 {
     font-size: 1.15em;
     color: white;
@@ -61,12 +62,13 @@ h2 {
     border-radius: 50px;
 }
 
+/* When hovering, background color and mouse change */
 h2:hover {
     cursor: pointer;
     background-color: #03a0c3;
 }
 
-/*navigation bar formatting*/
+/* navigation bar formatting, centered using flexbox */
 nav {
     display: flex;
     flex-direction: column;
@@ -78,20 +80,24 @@ nav {
     z-index: 1000;
 }
 
+/* Changes color of menu on about and resources page */
 #infoDropButton {
     color: #007bb8;
 }
 
+/* On about and resources page, when hovering over button, color changes */
 #infoDropButton:hover {
     color: white;
     cursor: pointer;
     background-color: #03a0c3;
 }
 
+/* Font size of paragraphs */
 p {
     font-size: 1.15em;
 }
 
+/* Sets color of links and removes underline */
 a {
     color: white;
     font-size: 1.15em;
@@ -101,14 +107,17 @@ a {
     border-radius: 50px;
 }
 
+/* On hover, link changes background color */
 a:hover {
     background-color: #03a0c3;
 }
 
+/* Sets size of nav bar links */
 .navLink {
     font-size: 1.5em;
 }
 
+/* On hover, change color */
 .aInfo,
 .aInfoLink {
     color: #007bb8;
@@ -124,35 +133,41 @@ a:hover {
 }
 
 /*formatting for Resources page*/
+/* Centers content on page */
 #resource-content {
     display: flex;
     flex-direction: column;
 }
 
+/* Uses flexbox for resources on page */
 .resource {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
+/* Changes color of in text links to resources or other pages */
 .inText {
     color: #007bb8;
     padding: 0;
     border-radius: 0;
     text-decoration: underline;
-    font-size: 1.3em;
+    font-size: 1em;
 
 }
 
-.resource-link {
-    margin-right: 3vw;
-}
-
+/* When hovering, color changes */
 .inText:hover {
     background-color: white;
     color: #ff6501;
 }
 
+/* Spacing for resource link */
+.resource-link {
+    margin-right: 3vw;
+}
+
+/* Indents sources on page */
 #sourcesDiv {
     margin-left: 50px;
 }
@@ -163,11 +178,7 @@ a:hover {
     flex-direction: column;
 }
 
-
-
-
 /* Container for bubbles appearing in background */
-
 #bodyBubbles {
     position: absolute !important;
     /* Sizing so particles will feel natural on page; no excess border */
@@ -177,16 +188,19 @@ a:hover {
     padding: 0;
 }
 
+/* Spacing for article tags on page */
 article {
     width: 80%;
     margin: 0 10%;
     padding: 1em 0;
 }
 
+/* Indents text */
 #textIndent {
     padding-left: 20px;
 }
 
+/* Div that displays when screen size is too small */
 #mobile {
     display: none;
     color: black;
@@ -276,9 +290,7 @@ canvas {
 
 /* Microsoft Edge only; justify content: space-evenly does not work in this window.
 Code adapted from James C. on https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/15947692/ */
-
 @supports (-ms-ime-align:auto) {
-
     nav,
     h1 {
         margin-left: 5%;
@@ -287,6 +299,7 @@ Code adapted from James C. on https://developer.microsoft.com/en-us/microsoft-ed
     }
 }
 
+/* Adaptive view */
 @media screen and (max-width: 768px) {
     h1 {
         font-size: 6vw;
