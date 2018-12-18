@@ -185,7 +185,7 @@ window.onload = function () {
         /* HOOMANS POPUP */
         boat.press = () => {
             if (ocean == trashPollution) {
-                popText.innerHTML = "The plastic water bottles we throw into the ocean can come back to haunt ua. The toxins in the plastic we use affects our health and can cause cancer.";
+                popText.innerHTML = "The plastic water bottles we throw into the ocean can come back to haunt us. The toxins in the plastic we use affects our health and can cause cancer.";
             } else if (ocean == oilSpill) {
                 popText.innerHTML = "Oh no! There goes our food. When oil spills happen, we can't go fishing because the fish are all gone. A lot of the population relies on fish for their food. What are we supposed to do?";
             } else if (ocean == chemSpill) {
